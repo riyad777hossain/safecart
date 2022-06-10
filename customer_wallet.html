@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> SafeCart - eCommerce HTML Template </title>
+
+    <!-- favicon -->
+    <link rel=icon href="favicon-dashboard.png" sizes="16x16" type="icon/png">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap5.min.css">
+    <!-- animate -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!-- slick carousel  -->
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <!-- LineAwesome -->
+    <link rel="stylesheet" href="assets/css/line-awesome.min.css">
+    <!-- Plugins css -->
+    <link rel="stylesheet" href="assets/css/plugins.css">
+    <!-- Data Table css -->
+    <link rel="stylesheet" href="assets/css/jquery.dataTables.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+
+    <!-- Dashboard area Starts -->
+    <div class="body-overlay"></div>
+    <div class="dashboard-area dashboard-padding">
+        <div class="container-fluid p-0">
+            <div class="dashboard-contents-wrapper">
+                <div class="dashboard-icon">
+                    <div class="sidebar-icon">
+                        <i class="las la-bars"></i>
+                    </div>
+                </div>
+                <div class="dashboard-left-content">
+                    <div class="dashboard-close-main">
+                        <div class="close-bars"> <i class="las la-times"></i> </div>
+                        <div class="dashboard-top">
+                            <div class="dashboard-logo">
+                                <a href="index.html">
+                                    <img src="assets/img/dashboard/dashboard-log.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="dashboard-bottom mt-5">
+                            <ul class="dashboard-list">
+                                <li class="list">
+                                    <a href="customer_dashboard.html"> <i class="las la-home"></i> Dashboard </a>
+                                </li>
+                                <li class="list has-children">
+                                    <a href="javascript:void(0)"> <i class="las la-tasks"></i> Orders </a>
+                                    <ul class="submenu">
+                                        <li class="list"> <a href="customer_order.html"> Order List </a> </li>
+                                        <li class="list"> <a href="customer_order_status.html"> Order Status  </a> </li>
+                                    </ul>
+                                </li>
+                                <li class="list">
+                                    <a href="customer_profile.html"> <i class="las la-user-alt"></i> Profile </a>
+                                </li>
+                                <li class="list active">
+                                    <a href="customer_wallet.html"> <i class="las la-wallet"></i> Wallet </a>
+                                </li>
+                                <li class="list">
+                                    <a href="cutomer_reward.html"> <i class="las la-gift"></i> Reward Point </a>
+                                </li>
+                                <li class="list">
+                                    <a href="javascript:void(0)"> <i class="las la-sign-out-alt"></i> Log Out </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard-right-contents mt-4 mt-lg-0">
+                    <div class="dashboard-top-contents">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="top-inner-contents search-area top-searchbar-wrapper">
+                                    <div class="dashboard-flex-contetns">
+                                        <div class="dashboard-left-flex">
+                                            <span class="date-text"> 21 December, 2021 07:20pm </span>
+                                            <h2 class="heading-two fw-500 mt-2"> My Wallet </h2>
+                                        </div>
+                                        <div class="dashboard-right-flex">
+                                            <div class="author-flex-contents">
+                                                <div class="author-icon">
+                                                    <div class="single-icon-flex">
+                                                        <span class="single-icon search-open"> <a href="javascript:void(0)"> <i class="las la-search"></i> </a> </span>
+                                                        <div class="single-icon notifications-parent">
+                                                            <a href="javascript:void(0)"> <i class="las la-bell"></i> </a>
+                                                            <div class="notification-list-wrapper">
+                                                                <h6 class="notification-title"> Notifications </h6>
+                                                                <ul class="notification-list">
+                                                                    <li class="list">
+                                                                        <div class="notification-list-flex">
+                                                                            <div class="notification-icon">
+                                                                                <i class="las la-bell"></i>
+                                                                            </div>
+                                                                            <div class="notification-contents">
+                                                                                <a class="list-title" href="javascript:void(0)"> Notification One </a>
+                                                                                <span class="list-sub"> 4 hours ago </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="list">
+                                                                        <div class="notification-list-flex">
+                                                                            <div class="notification-icon">
+                                                                                <i class="las la-bell"></i>
+                                                                            </div>
+                                                                            <div class="notification-contents">
+                                                                                <a class="list-title" href="javascript:void(0)"> Notification Two </a>
+                                                                                <span class="list-sub"> 8 hours ago </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="list">
+                                                                        <div class="notification-list-flex">
+                                                                            <div class="notification-icon">
+                                                                                <i class="las la-bell"></i>
+                                                                            </div>
+                                                                            <div class="notification-contents">
+                                                                                <a class="list-title" href="javascript:void(0)"> Notification Three </a>
+                                                                                <span class="list-sub"> 1 day ago </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="list">
+                                                                        <div class="notification-list-flex">
+                                                                            <div class="notification-icon">
+                                                                                <i class="las la-bell"></i>
+                                                                            </div>
+                                                                            <div class="notification-contents">
+                                                                                <a class="list-title" href="javascript:void(0)"> Notification Four </a>
+                                                                                <span class="list-sub"> 1 day ago </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="list">
+                                                                        <div class="notification-list-flex">
+                                                                            <div class="notification-icon">
+                                                                                <i class="las la-bell"></i>
+                                                                            </div>
+                                                                            <div class="notification-contents">
+                                                                                <a class="list-title" href="javascript:void(0)"> Notification Five </a>
+                                                                                <span class="list-sub"> 1 day ago </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                                <a href="javascript:void(0)" class="all-notification"> See All Notification </a>
+                                                            </div>
+                                                            <span class="badge-icon"> 5 </span>
+                                                        </div>
+                                                        <div class="single-icon notifications-parent">
+                                                            <a href="javascript:void(0)"> <i class="las la-envelope"></i> </a>
+                                                            <div class="notification-list-wrapper">
+                                                                <h6 class="notification-title"> Messages </h6>
+                                                                <ul class="notification-list">
+                                                                    <li class="list">
+                                                                        <div class="notification-list-flex">
+                                                                            <div class="notification-author">
+                                                                                <img src="assets/img/dashboard/table-logo.jpg" alt="img">
+                                                                            </div>
+                                                                            <div class="notification-contents">
+                                                                                <a class="list-title" href="javascript:void(0)"> Message One </a>
+                                                                                <span class="list-sub"> 4 hours ago </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="list">
+                                                                        <div class="notification-list-flex">
+                                                                            <div class="notification-author">
+                                                                                <img src="assets/img/dashboard/table-logo2.jpg" alt="img">
+                                                                            </div>
+                                                                            <div class="notification-contents">
+                                                                                <a class="list-title" href="javascript:void(0)"> Message Two </a>
+                                                                                <span class="list-sub"> 8 hours ago </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="list">
+                                                                        <div class="notification-list-flex">
+                                                                            <div class="notification-author">
+                                                                                <img src="assets/img/dashboard/table-logo3.jpg" alt="img">
+                                                                            </div>
+                                                                            <div class="notification-contents">
+                                                                                <a class="list-title" href="javascript:void(0)"> Message Three </a>
+                                                                                <span class="list-sub"> 1 day ago </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="list">
+                                                                        <div class="notification-list-flex">
+                                                                            <div class="notification-author">
+                                                                                <img src="assets/img/dashboard/table-logo4.jpg" alt="img">
+                                                                            </div>
+                                                                            <div class="notification-contents">
+                                                                                <a class="list-title" href="javascript:void(0)"> Message Four </a>
+                                                                                <span class="list-sub"> 3 day ago </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="list">
+                                                                        <div class="notification-list-flex">
+                                                                            <div class="notification-author">
+                                                                                <img src="assets/img/dashboard/table-logo5.jpg" alt="img">
+                                                                            </div>
+                                                                            <div class="notification-contents">
+                                                                                <a class="list-title" href="javascript:void(0)"> Message Five </a>
+                                                                                <span class="list-sub"> 7 day ago </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                                <a href="javascript:void(0)" class="all-notification"> See All Messages </a>
+                                                            </div>
+                                                            <span class="badge-icon"> 7 </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="author-thumb-contents">
+                                                    <div class="author-thumb">
+                                                        <a href="javascript:void(0)"> <img src="assets/img/dashboard/author.jpg" alt="img"> </a>
+                                                    </div>
+                                                    <ul class="author-account-list">
+                                                        <li class="list"> <a href="signin.html"> Sign In </a> </li>
+                                                        <li class="list"> <a href="signup.html"> Sign Up </a> </li>
+                                                        <li class="list"> <a href="javascript:void(0)"> Log Out </a> </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- SearcBar -->
+                                    <div class="search-bar">
+                                        <form class="menu-search-form" action="#">
+                                            <div class="search-close"> <i class="las la-times"></i> </div>
+                                            <input class="item-search" type="text" placeholder="Search Here.....">
+                                            <button type="submit"> Search Now </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dashboard-promo">
+                        <div class="row justify-content-center">
+                            <div class="col-xxl-9 col-sm-12">
+                                <div class="row justify-content-center">
+                                    <div class="col-xxl-4 col-xl-6 col-md-6 mt-4 wallet-child">
+                                        <div class="single-wallet">
+                                            <div class="wallet-shapes">
+                                            </div>
+                                            <div class="wallet-flex-content">
+                                                <div class="icon">
+                                                    <i class="las la-dollar-sign"></i>
+                                                </div>
+                                                <div class="wallet-contents">
+                                                    <span class="wallet-para ff-rubik"> Wallet Balance </span>
+                                                    <h4 class="wallet-titles"> $25,215 </h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-4 col-xl-6 col-md-6 mt-4 wallet-child">
+                                        <div class="single-wallet add-money">
+                                            <div class="wallet-flex-content">
+                                                <div class="icon">
+                                                    <i class="las la-plus"></i>
+                                                </div>
+                                                <div class="wallet-contents">
+                                                    <h4 class="wallet-titles"> Add Money </h4>
+                                                </div>
+                                            </div>
+                                            <div class="add-money-wrapper">
+                                                <span class="add-money-close"> <i class="las la-times"></i> </span>
+                                                <div class="add-money-contents">
+                                                    <h5 class="wallet-titles"> Add Your Money </h5>
+                                                    <div class="add-money-inner mt-4">
+                                                        <form class="add-money-form" action="#">
+                                                            <div class="dashboard-input">
+                                                                <input class="form--control" type="text" value="$100">
+                                                            </div>
+                                                            <h6 class="payment-method-title mt-4"> Select Payment Method </h6>
+                                                            <div class="add-money-cards">
+                                                                <div class="payment-card mt-4">
+                                                                    <a href="javascript:void(0)" class="single-card"> <img src="assets/img/single-page/payment1.png" alt=""> </a>
+                                                                    <a href="javascript:void(0)" class="single-card"> <img src="assets/img/single-page/payment2.png" alt=""> </a>
+                                                                    <a href="javascript:void(0)" class="single-card"> <img src="assets/img/single-page/payment3.png" alt=""> </a>
+                                                                    <a href="javascript:void(0)" class="single-card"> <img src="assets/img/single-page/payment4.png" alt=""> </a>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="dashboard-checkbox add-money-checkbox mt-3">
+                                                                <input class="check-input" type="checkbox" id="agree">
+                                                                <label class="checkbox-label" for="agree"> I have read and agree </label>
+                                                            </div>
+                                                            <div class="dashboard-btn-wrapper">
+                                                                <button type="submit" class="btn-submit btn-medium dashboard-bg w-100 radius-10 mt-4"> Submit </button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-4 col-xl-6 col-md-6 mt-4 wallet-child">
+                                        <div class="single-wallet">
+                                            <div class="wallet-flex-content">
+                                                <div class="icon">
+                                                    <i class="las la-gift"></i>
+                                                </div>
+                                                <div class="wallet-contents">
+                                                    <h4 class="wallet-titles"> Redeem Reward Point </h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dashboard-recent-order">
+                                    <div class="row">
+                                        <div class="col-lg-12 mt-4">
+                                            <div class="recent-order-wrapper dashboard-table bg-white">
+                                                <div class="table-responsive table-responsive--md mt-4">
+                                                    <table class="custom--table pt-4" id="myTable">
+                                                        <thead class="head-bg">
+                                                            <tr>
+                                                                <th> ID </th>
+                                                                <th> Date </th>
+                                                                <th> Amount </th>
+                                                                <th> Status </th>
+                                                                <th> Method </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="table-cart-row">
+                                                                <td class="price-td" data-label="ID"> Zr07Wt </td>
+                                                                <td data-label="Date"> 20-01-22 </td>
+                                                                <td class="price-td" data-label="Amount"> $140 </td>
+                                                                <td data-label="Status">
+                                                                    <div class="status-dropdown">
+                                                                        <button value="Canceled" class="btn dropdown-toggle add-dropdown-text" data-bs-toggle="dropdown" aria-expanded="false"> Canceled </button>
+                                                                        <ul class="dropdown-menu">
+                                                                            <li class="single-item" data-value="Pending"><a class="dropdown-item" href="#">Pending</a></li>
+                                                                            <li class="single-item" data-value="Completed"><a class="dropdown-item" href="#">Completed</a></li>
+                                                                            <li class="single-item" data-value="Canceled"><a class="dropdown-item" href="#">Canceled</a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="price-td" data-label="Method"> Bank </td>
+                                                            </tr>
+                                                            <tr class="table-cart-row">
+                                                                <td class="price-td" data-label="Order ID"> Qwe89kdg </td>
+                                                                <td data-label="Date"> 22-01-22 </td>
+                                                                <td class="price-td" data-label="Amount"> $155 </td>
+                                                                <td data-label="Status">
+                                                                    <div class="status-dropdown">
+                                                                        <button value="Pending" class="btn dropdown-toggle add-dropdown-text" data-bs-toggle="dropdown" aria-expanded="false"> Pending </button>
+                                                                        <ul class="dropdown-menu">
+                                                                            <li class="single-item" data-value="Pending"><a class="dropdown-item" href="#">Pending</a></li>
+                                                                            <li class="single-item" data-value="Completed"><a class="dropdown-item" href="#">Completed</a></li>
+                                                                            <li class="single-item" data-value="Canceled"><a class="dropdown-item" href="#">Canceled</a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="price-td" data-label="Method"> Card </td>
+                                                            </tr>
+                                                            <tr class="table-cart-row">
+                                                                <td class="price-td" data-label="Order ID"> Yu34dl </td>
+                                                                <td data-label="Date"> 23-01-22 </td>
+                                                                <td class="price-td" data-label="Amount"> $144 </td>
+                                                                <td data-label="Status">
+                                                                    <div class="status-dropdown">
+                                                                        <button value="Completed" class="btn dropdown-toggle add-dropdown-text" data-bs-toggle="dropdown" aria-expanded="false"> Completed </button>
+                                                                        <ul class="dropdown-menu">
+                                                                            <li class="single-item" data-value="Pending"><a class="dropdown-item" href="#">Pending</a></li>
+                                                                            <li class="single-item" data-value="Completed"><a class="dropdown-item" href="#">Completed</a></li>
+                                                                            <li class="single-item" data-value="Canceled"><a class="dropdown-item" href="#">Canceled</a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="price-td" data-label="Method"> Card </td>
+                                                            </tr>
+                                                            <tr class="table-cart-row">
+                                                                <td class="price-td" data-label="Order ID"> Etm00rh </td>
+                                                                <td data-label="Date"> 24-01-22 </td>
+                                                                <td class="price-td" data-label="Amount"> $122 </td>
+                                                                <td data-label="Status">
+                                                                    <div class="status-dropdown">
+                                                                        <button value="Pending" class="btn dropdown-toggle add-dropdown-text" data-bs-toggle="dropdown" aria-expanded="false"> Pending </button>
+                                                                        <ul class="dropdown-menu">
+                                                                            <li class="single-item" data-value="Pending"><a class="dropdown-item" href="#">Pending</a></li>
+                                                                            <li class="single-item" data-value="Completed"><a class="dropdown-item" href="#">Completed</a></li>
+                                                                            <li class="single-item" data-value="Canceled"><a class="dropdown-item" href="#">Canceled</a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="price-td" data-label="Method"> Card </td>
+                                                            </tr>
+                                                            <tr class="table-cart-row">
+                                                                <td class="price-td" data-label="Order ID"> Pr95Wl </td>
+                                                                <td data-label="Date"> 25-01-22 </td>
+                                                                <td class="price-td" data-label="Amount"> $120 </td>
+                                                                <td data-label="Status">
+                                                                    <div class="status-dropdown">
+                                                                        <button value="Canceled" class="btn dropdown-toggle add-dropdown-text" data-bs-toggle="dropdown" aria-expanded="false"> Canceled </button>
+                                                                        <ul class="dropdown-menu">
+                                                                            <li class="single-item" data-value="Pending"><a class="dropdown-item" href="#">Pending</a></li>
+                                                                            <li class="single-item" data-value="Completed"><a class="dropdown-item" href="#">Completed</a></li>
+                                                                            <li class="single-item" data-value="Canceled"><a class="dropdown-item" href="#">Canceled</a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="price-td" data-label="Method"> Bank </td>
+                                                            </tr>
+                                                            <tr class="table-cart-row">
+                                                                <td class="price-td" data-label="Order ID"> Mr07Wr </td>
+                                                                <td data-label="Date"> 27-01-22 </td>
+                                                                <td class="price-td" data-label="Amount"> $125 </td>
+                                                                <td data-label="Status">
+                                                                    <div class="status-dropdown">
+                                                                        <button value="Completed" class="btn dropdown-toggle add-dropdown-text" data-bs-toggle="dropdown" aria-expanded="false"> Completed </button>
+                                                                        <ul class="dropdown-menu">
+                                                                            <li class="single-item" data-value="Pending"><a class="dropdown-item" href="#">Pending</a></li>
+                                                                            <li class="single-item" data-value="Completed"><a class="dropdown-item" href="#">Completed</a></li>
+                                                                            <li class="single-item" data-value="Canceled"><a class="dropdown-item" href="#">Canceled</a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="price-td" data-label="Method"> Bank </td>
+                                                            </tr>
+                                                            <tr class="table-cart-row">
+                                                                <td class="price-td" data-label="Order ID"> Rh777zw </td>
+                                                                <td data-label="Date"> 30-01-22 </td>
+                                                                <td class="price-td" data-label="Amount"> $120 </td>
+                                                                <td data-label="Status">
+                                                                    <div class="status-dropdown">
+                                                                        <button value="Pending" class="btn dropdown-toggle add-dropdown-text" data-bs-toggle="dropdown" aria-expanded="false"> Pending </button>
+                                                                        <ul class="dropdown-menu">
+                                                                            <li class="single-item" data-value="Pending"><a class="dropdown-item" href="#">Pending</a></li>
+                                                                            <li class="single-item" data-value="Completed"><a class="dropdown-item" href="#">Completed</a></li>
+                                                                            <li class="single-item" data-value="Canceled"><a class="dropdown-item" href="#">Canceled</a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="price-td" data-label="Method"> Card </td>
+                                                            </tr>
+                                                            <tr class="table-cart-row">
+                                                                <td class="price-td" data-label="Order ID"> Zr07Wt </td>
+                                                                <td data-label="Date"> 01-02-22 </td>
+                                                                <td class="price-td" data-label="Amount"> $135 </td>
+                                                                <td data-label="Status">
+                                                                    <div class="status-dropdown">
+                                                                        <button value="Canceled" class="btn dropdown-toggle add-dropdown-text" data-bs-toggle="dropdown" aria-expanded="false"> Canceled </button>
+                                                                        <ul class="dropdown-menu">
+                                                                            <li class="single-item" data-value="Pending"><a class="dropdown-item" href="#">Pending</a></li>
+                                                                            <li class="single-item" data-value="Completed"><a class="dropdown-item" href="#">Completed</a></li>
+                                                                            <li class="single-item" data-value="Canceled"><a class="dropdown-item" href="#">Canceled</a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="price-td" data-label="Method"> Bank </td>
+                                                            </tr>
+                                                            <tr class="table-cart-row">
+                                                                <td class="price-td" data-label="Order ID"> W557Wt </td>
+                                                                <td data-label="Date"> 03-02-22 </td>
+                                                                <td class="price-td" data-label="Amount"> $110 </td>
+                                                                <td data-label="Status">
+                                                                    <div class="status-dropdown">
+                                                                        <button value="Pending" class="btn dropdown-toggle add-dropdown-text" data-bs-toggle="dropdown" aria-expanded="false"> Pending </button>
+                                                                        <ul class="dropdown-menu">
+                                                                            <li class="single-item" data-value="Pending"><a class="dropdown-item" href="#">Pending</a></li>
+                                                                            <li class="single-item" data-value="Completed"><a class="dropdown-item" href="#">Completed</a></li>
+                                                                            <li class="single-item" data-value="Canceled"><a class="dropdown-item" href="#">Canceled</a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="price-td" data-label="Method"> Bank </td>
+                                                            </tr>
+                                                            <tr class="table-cart-row">
+                                                                <td class="price-td" data-label="Order ID"> Zp69rh </td>
+                                                                <td data-label="Date"> 05-02-22 </td>
+                                                                <td class="price-td" data-label="Amount"> $130 </td>
+                                                                <td data-label="Status">
+                                                                    <div class="status-dropdown">
+                                                                        <button value="Completed" class="btn dropdown-toggle add-dropdown-text" data-bs-toggle="dropdown" aria-expanded="false"> Completed </button>
+                                                                        <ul class="dropdown-menu">
+                                                                            <li class="single-item" data-value="Pending"><a class="dropdown-item" href="#">Pending</a></li>
+                                                                            <li class="single-item" data-value="Completed"><a class="dropdown-item" href="#">Completed</a></li>
+                                                                            <li class="single-item" data-value="Canceled"><a class="dropdown-item" href="#">Canceled</a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="price-td" data-label="Method"> Bank </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-sm-12 justify-content-center">
+                                <div class="wallet-card-wrapper">
+                                    <div class="wallet-card radius-20  mt-4">
+                                        <img class="radius-20" src="assets/img/dashboard/wallet-card1.jpg" alt="card">
+                                    </div>
+                                    <div class="single-card-info bg-white mt-4">
+                                        <h5 class="dashboard-common-title-one"> Card Information </h5>
+                                        <ul class="contact-info-list mt-4">
+                                            <li class="list"> <span class="span-title"> Status </span> <strong class="title color-heading"> Active </strong> </li>
+                                            <li class="list"> <span class="span-title"> Expired </span> <strong class="title color-heading"> September, 2025 </strong> </li>
+                                            <li class="list"> <span class="span-title"> Bank Name </span> <strong class="title color-heading"> Standard Bank </strong> </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Dashboard area end -->
+
+
+    <!-- jquery -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <!-- jquery Migrate -->
+    <script src="assets/js/jquery-migrate.min.js"></script>
+    <!-- bootstrap -->
+    <script src="assets/js/bootstrap5.bundle.min.js"></script>
+    <!-- Lazy Load Js -->
+    <script src="assets/js/jquery.lazy.min.js"></script>
+    <!-- Slick Slider -->
+    <script src="assets/js/slick.js"></script>
+    <!-- All Plugins js -->
+    <script src="assets/js/plugins.js"></script>
+    <!-- Range Slider -->
+    <script src="assets/js/nouislider-8.5.1.min.js"></script>
+    <!-- All Plugins two js -->
+    <script src="assets/js/plugin-two.js"></script>
+    <!-- Nice Scroll -->
+    <script src="assets/js/jquery.nicescroll.min.js"></script>
+    <!-- Data Table js -->
+    <script src="assets/js/jquery.dataTables.min.js"></script>
+    <!-- main js -->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#myTable').DataTable();
+        });
+    </script>
+
+</body>
+
+</html>
