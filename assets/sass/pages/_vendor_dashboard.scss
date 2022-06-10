@@ -1,0 +1,1045 @@
+/* Vendor Dashboard css */
+
+
+/* Vendor Sign In */
+
+.vendor-signin-area {}
+
+.vendor-signin-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.admin-login-wrapper {
+    max-width: 500px;
+    padding-left: 50px;
+    @include responsive(allPhone) {
+        padding-top: 50px;
+    }
+    @include responsive(xxs) {
+        padding-left: 20px;
+    }
+    @include responsive(vxxs) {
+        padding-left: 10px;
+    }
+}
+
+.center-text {
+    text-align: center;
+}
+
+.remember-password-flex {
+    gap: 10px;
+}
+
+.conditions {
+    font-weight: 500;
+    display: inline-block;
+    &:hover {
+        color: var(--customer-profile);
+    }
+}
+
+.account-bottom {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    .account-title {
+        color: var(--light-color);
+    }
+    .signup-login {
+        color: var(--customer-profile);
+    }
+}
+
+
+/* vendor reg */
+
+.single-vendor-reg {
+    padding: 40px;
+    @include responsive(allPhone) {
+        padding: 30px;
+    }
+    @include responsive(xs) {
+        padding: 30px 20px;
+    }
+    @include responsive(vxxs) {
+        padding: 20px 15px;
+    }
+}
+
+
+/*vendor Dashboard */
+
+// calendar style css
+.color-calendar.basic .calendar__header {
+    padding: 0;
+}
+
+.color-calendar.basic .calendar__body {
+    padding: 10px 0 0;
+}
+
+.color-calendar .calendar__days {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(20px, 55px));
+    grid-template-rows: repeat(4, minmax(30px, 40px));
+}
+
+.color-calendar .calendar__picker .calendar__picker-month-option {
+    padding: 12px 0;
+    font-weight: 500;
+    color: var(--heading-color);
+    border-radius: 10px;
+    border: 0;
+    transition: all .3s;
+}
+
+.color-calendar .calendar__picker .calendar__picker-month-option::after {
+    background: rgba(#ddd, .3);
+    border-radius: 10px;
+    opacity: 1;
+    transition: all .3s;
+}
+
+.color-calendar .calendar__picker .calendar__picker-month-selected::after {
+    background: var(--customer-profile);
+    border: 0;
+    box-shadow: none;
+    transition: all .3s;
+}
+
+.color-calendar .calendar__picker .calendar__picker-month-option:hover {
+    color: $white;
+}
+
+.color-calendar .calendar__picker .calendar__picker-month-option:hover:after {
+    background: var(--customer-profile);
+    opacity: 1;
+    color: $white;
+}
+
+.color-calendar .calendar__picker .calendar__picker-month-selected {
+    color: $white;
+    box-shadow: none;
+}
+
+.color-calendar.basic .calendar__picker-year-today {
+    box-shadow: none;
+}
+
+.color-calendar .calendar__picker .calendar__picker-year-option {
+    padding: 12px 0;
+    font-weight: 500;
+    color: var(--heading-color);
+    border-radius: 10px;
+    border: 0;
+    transition: all .3s;
+}
+
+.color-calendar .calendar__picker .calendar__picker-year-option::after {
+    background: rgba(#ddd, .3);
+    border-radius: 10px;
+    opacity: 1;
+    transition: all .3s;
+}
+
+.color-calendar .calendar__picker .calendar__picker-year-selected::after {
+    background: var(--customer-profile);
+    border: 0;
+    box-shadow: none;
+    transition: all .3s;
+}
+
+.color-calendar .calendar__picker .calendar__picker-year-option:hover {
+    color: $white;
+}
+
+.color-calendar .calendar__picker .calendar__picker-year-option:hover:after {
+    background: var(--customer-profile);
+    opacity: 1;
+    color: $white;
+}
+
+.color-calendar .calendar__picker .calendar__picker-year-selected {
+    color: $white;
+    box-shadow: none;
+}
+
+.calendar__day-today {}
+
+.calendar__day-selected {}
+
+.color-calendar.basic .calendar__days .calendar__day-bullet {
+    background: var(--customer-profile);
+}
+
+.color-calendar.basic .calendar__days .calendar__day-selected .calendar__day-box {
+    background: var(--customer-profile);
+    box-shadow: 0 0 10px rgba(var(--customer-profile-rgb), .1);
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.color-calendar.basic .calendar__days .calendar__day-today .calendar__day-box {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.color-calendar.basic .calendar__days .calendar__day-text:hover~.calendar__day-box {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.color-calendar.basic .calendar__days .calendar__day-box:hover {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.color-calendar.basic .calendar__days .calendar__day {
+    font-weight: 400;
+    font-size: 14px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.color-calendar .calendar__monthyear {
+    font-size: 18px;
+}
+
+.color-calendar.basic .calendar__weekdays .calendar__weekday {
+    font-weight: 500;
+    opacity: 1;
+    font-size: 13px;
+    color: var(--heading-color);
+}
+
+.color-calendar.basic .calendar__arrow-inner::after {
+    background: rgba(#ddd, .3);
+    opacity: 1;
+}
+
+.color-calendar.basic .calendar__arrow-inner:hover::after {
+    transition: all 0.3s ease-in-out;
+    background: var(--customer-profile);
+    opacity: 1;
+}
+
+.color-calendar.basic .calendar__arrow-inner:hover::before {
+    transition: all 0.3s ease-in-out;
+    color: $white !important;
+}
+
+.color-calendar.basic .calendar__arrow-inner::before {
+    color: var(--heading-color);
+    font-size: 16px;
+}
+
+// End Calendar css
+.chart-height {
+    #bar-chart {
+        max-height: 180px !important;
+    }
+}
+
+.dashboard-seller-list {
+    &.style-02 {
+        .list {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+    &.style-03 {
+        .list {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+            .vendor-seller-thumb-content {
+                .seller-thumbs {
+                    height: 35px;
+                    width: 35px;
+                }
+                .seller-name-title {
+                    font-size: 16px;
+                }
+            }
+            .dashbaord-price-contents {
+                .track-money-withdraw {
+                    padding: 3px 10px;
+                    font-size: 14px;
+                    background: rgba(var(--customer-profile-rgb), .1);
+                    border-radius: 3px;
+                    transition: all .3s;
+                    &:hover {
+                        background-color: var(--customer-profile);
+                        color: $white;
+                    }
+                    &.color-one {
+                        background: rgba(var(--main-color-one-rgb), .1);
+                        &:hover {
+                            background: var(--main-color-one);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+        @include responsive(sm) {
+            gap: 10px;
+        }
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+        .vendor-seller-thumb-content {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            .seller-thumbs {
+                height: 50px;
+                width: 50px;
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .seller-name-title {
+                font-size: 16px;
+                line-height: 24px;
+                display: block;
+            }
+        }
+        .dashbaord-price-contents {
+            .dashbaord-seller-price {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.vendor-seller-btn {
+    text-align: right;
+}
+
+.view-all-btn {
+    display: inline-block;
+    font-size: 16px;
+    transition: all .3s;
+    i {
+        transition: all .3s;
+    }
+    &:hover {
+        color: var(--customer-profile);
+        letter-spacing: 1px;
+        i {
+            margin-left: 5px;
+        }
+    }
+}
+
+.seller-title-flex-contents {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px 5px;
+}
+
+.seller-title-right {}
+
+.chart-icon {
+    background: var(--dashboard-color);
+    color: var(--customer-profile);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    font-size: 20px;
+    transition: all .3s;
+    &:hover {
+        color: $white;
+        background: var(--customer-profile);
+    }
+}
+
+.dashboard-single-order {}
+
+.dashboard-flex-order-contents {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    @include responsive(vxxs) {
+        gap: 15px;
+    }
+    .dashboard-order-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 75px;
+        width: 75px;
+        font-size: 50px;
+        color: $white;
+        background-color: var(--customer-profile);
+        @include responsive(vxxs) {
+            height: 65px;
+            width: 65px;
+            font-size: 40px;
+        }
+    }
+}
+
+.dashboard-order-content {
+    .order-title {}
+    .order-price-title {
+        font-size: 36px;
+        word-break: break-all;
+    }
+}
+
+
+/* vendor profile */
+
+.dashboard-top-flex-contents {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    flex-wrap: wrap;
+    @include responsive(xxl) {
+        display: block;
+    }
+    @include responsive(xl) {
+        display: block;
+    }
+    @include responsive(lg) {
+        display: block;
+    }
+    @include responsive(allPhone) {
+        display: block;
+    }
+}
+
+.profile-details-padding {
+    padding: 30px 80px;
+    @include responsive(xxxl) {
+        padding: 20px;
+    }
+}
+
+.dashboard-profile-details {}
+
+.profile-contents {
+    .profile-review {
+        .star-icon {
+            font-size: 14px;
+            color: $review-color;
+        }
+    }
+    .profile-call {
+        color: var(--light-color);
+        display: block;
+        transition: all .3s;
+        &:hover {
+            color: var(--customer-profile);
+        }
+    }
+    .visit-site {
+        font-size: 14px;
+        padding: 7px 15px;
+        color: $white;
+        display: inline-block;
+        transition: all .3s;
+        &:hover {
+            background: none;
+            color: var(--customer-profile);
+        }
+    }
+}
+
+.dashboard-profile-thumb-contents {
+    flex: 1;
+    @include responsive(xxl) {
+        margin-top: 24px;
+    }
+    @include responsive(xl) {
+        margin-top: 24px;
+    }
+    @include responsive(lg) {
+        margin-top: 24px;
+    }
+    @include responsive(allPhone) {
+        margin-top: 24px;
+    }
+}
+
+.edit-profile-btn-wrapper {
+    &.right-text {
+        text-align: right;
+    }
+    .edit-profile {
+        padding: 7px 15px;
+        font-size: 14px;
+        color: $white;
+        display: inline-block;
+        transition: all .3s;
+        &:hover {
+            color: var(--customer-profile);
+            background: none;
+        }
+    }
+}
+
+.dashboard-flex-item-two {
+    display: flex;
+    align-items: stretch;
+    gap: 0 24px;
+    @include responsive(xxl) {
+        display: block;
+    }
+    @include responsive(xl) {
+        display: block;
+    }
+    @include responsive(lg) {
+        display: block;
+    }
+    @include responsive(allPhone) {
+        display: block;
+    }
+    .single-flex-dashbaord {
+        flex: 1;
+        width: 50%;
+        @include responsive(xxl) {
+            width: 100%;
+        }
+        @include responsive(xl) {
+            width: 100%;
+        }
+        @include responsive(lg) {
+            width: 100%;
+        }
+        @include responsive(allPhone) {
+            width: 100%;
+        }
+    }
+}
+
+.dashboard-flex-all {
+    display: flex;
+    align-items: stretch;
+    gap: 0 24px;
+    @include responsive(xxl) {
+        display: block;
+    }
+    @include responsive(xl) {
+        display: block;
+    }
+    @include responsive(lg) {
+        display: block;
+    }
+    @include responsive(allPhone) {
+        display: block;
+    }
+}
+
+.dashboard-flex-item-four {
+    display: flex;
+    align-items: stretch;
+    flex-basis: 100%;
+    gap: 0 24px;
+    @include responsive(allPhone) {
+        flex-wrap: nowrap;
+    }
+    @include responsive(sm) {
+        display: block;
+    }
+    .single-flex-dashbaord-two {
+        flex-basis: 100%;
+        width: 50%;
+        @include responsive(allPhone) {
+            width: 100%;
+        }
+    }
+    .dashboard-single-profile {
+        height: unset;
+    }
+}
+
+.dashboard-flex-row-profile {
+    display: flex;
+    align-items: flex-start;
+    gap: 0 24px;
+    @include responsive(sm) {
+        display: block;
+    }
+    .dashboard-single-profile {
+        flex: 1;
+    }
+}
+
+.dashboard-single-profile {
+    height: 100%;
+}
+
+.dashboard-profile-padding {
+    padding: 40px 30px;
+    @include responsive(xxxl) {
+        padding: 30px 15px;
+    }
+    @include responsive(xxl) {
+        padding: 30px 15px;
+    }
+    @include responsive(vxxs) {
+        padding: 20px 15px;
+    }
+}
+
+.single-dashboard-profile {
+    @include responsive(xxl) {
+        flex: 1;
+    }
+    @include responsive(xl) {
+        flex: 1;
+    }
+}
+
+.profile-single-contents {
+    .dashboard-earning-para {
+        display: block;
+        line-height: 28px;
+        padding: 0 35px;
+        @include responsive(xxxl) {
+            padding: 0 20px;
+        }
+        @include responsive(xxl) {
+            padding: 0 20px;
+        }
+    }
+    .dashboard-percent-discount {
+        background: rgba(var(--customer-profile-rgb), .1);
+        padding: 5px 20px;
+        transition: all .3s;
+        &:hover {
+            background: var(--customer-profile);
+            color: $white;
+        }
+    }
+}
+
+.earning-btn-wrapper {
+    .all-earning-btn {
+        display: inline-block;
+        padding: 10px 15px;
+        font-size: 15px;
+        &:hover {
+            background: none;
+            color: var(--customer-profile);
+        }
+    }
+}
+
+.profile-contact-list {
+    .list {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        @include responsive(sm) {
+            gap: 10px;
+        }
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+        .icon {
+            font-size: 24px;
+        }
+        .profile-contact {
+            text-align: left;
+            .label-title {
+                font-size: 14px;
+                line-height: 24px;
+                display: block;
+            }
+            .contact {
+                font-size: 16px;
+                line-height: 26px;
+                transition: all .3s;
+                &:hover {
+                    color: var(--customer-profile);
+                }
+            }
+        }
+    }
+}
+
+.dashboard-orders-padding {
+    padding: 43px 30px;
+    @include responsive(xxl) {
+        padding: 43px 20px;
+    }
+    @include responsive(xl) {
+        padding: 48px 20px;
+    }
+    @include responsive(lg) {
+        padding: 48px 20px;
+    }
+    @include responsive(allPhone) {
+        padding: 48px 20px;
+    }
+    @include responsive(vxxs) {
+        padding: 20px 15px;
+    }
+}
+
+
+/* vendor edit profile */
+
+.vendor-padding {
+    padding: 30px;
+    @include responsive(xs) {
+        padding: 20px 20px;
+    }
+    @include responsive(vxxs) {
+        padding: 20px 10px;
+    }
+}
+
+.vendor-title {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 36px;
+    @include responsive(allPhone) {
+        font-size: 26px;
+        line-height: 32px;
+    }
+    @include responsive(xs) {
+        font-size: 25px;
+    }
+    @include responsive(vxxs) {
+        font-size: 23px;
+    }
+}
+
+
+/* vendor Order Status */
+
+.change-status {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    .nice-select-two {
+        .nice-select {
+            &::after {
+                right: 15px;
+            }
+        }
+    }
+}
+
+.change-btn {
+    .das-btn {
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 400;
+        color: #333;
+        line-height: 28px;
+        padding: 12px 25px;
+        background: transparent;
+        border: 2px solid transparent;
+        transition: all .3s;
+        &.dashboard-bg {
+            background: var(--customer-profile);
+            color: $white;
+            border: 2px solid var(--customer-profile);
+            &:hover {
+                background: none;
+                color: var(--customer-profile);
+            }
+        }
+    }
+}
+
+
+/* vendor Add Products */
+
+.add-product-btn {
+    .das-btn {
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 400;
+        color: #333;
+        line-height: 28px;
+        padding: 16px 25px;
+        background: transparent;
+        border: 2px solid transparent;
+        transition: all .3s;
+        &.dashboard-bg {
+            background: var(--customer-profile);
+            color: $white;
+            border: 2px solid var(--customer-profile);
+            &:hover {
+                background: none;
+                color: var(--customer-profile);
+            }
+        }
+    }
+}
+
+
+/* vendor Withdraw Request */
+
+.dashboard-withdraw-request {
+    padding: 6px 30px 30px;
+    @include responsive(allPhone) {
+        padding: 6px 20px 30px;
+    }
+    @include responsive(xxs) {
+        padding: 6px 15px 30px;
+    }
+}
+
+
+/* vendor Coupon List */
+
+.dashboard-coupon-list {
+    padding: 30px;
+    @include responsive(lg) {
+        padding: 20px;
+    }
+}
+
+.vendor-coupon-switch {
+    position: relative;
+    z-index: 1;
+    .custom-switch {
+        height: 0;
+        width: 0;
+        visibility: hidden;
+        position: absolute;
+        &:checked+.switch-label {
+            background: var(--customer-profile);
+            &::after {
+                left: calc(100% - 5px);
+                -webkit-transform: translateX(-100%);
+                -ms-transform: translateX(-100%);
+                transform: translateX(-100%);
+            }
+        }
+    }
+    .switch-label {
+        cursor: pointer;
+        text-indent: -9999px;
+        width: 50px;
+        height: 25px;
+        background: #DDDDDD;
+        display: block;
+        border-radius: 100px;
+        position: relative;
+        margin: auto;
+        @include responsive(allPhone) {
+            margin: 0;
+            margin-left: auto;
+        }
+        &.active {
+            &::after {
+                width: 25px;
+            }
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            width: 25px;
+            height: 15px;
+            background: #fff;
+            border-radius: 60px;
+            -webkit-transition: 0.3s;
+            -o-transition: 0.3s;
+            transition: 0.3s;
+        }
+    }
+}
+
+
+/* vendor Coupon Code */
+
+.dashboard-coupon-code {
+    padding: 30px;
+    @include responsive(allPhone) {
+        padding: 20px;
+    }
+    @include responsive(xxs) {
+        padding: 20px 15px;
+    }
+}
+
+
+/* vendor Dashboard Products Add */
+
+.dashboard-flex-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+}
+
+.dashboard-bg {
+    background: var(--customer-profile);
+    color: $white;
+    border: 2px solid var(--customer-profile);
+    transition: all .3s;
+}
+
+.dashboard-products-add {
+    padding: 30px;
+    @include responsive(allPhone) {
+        padding: 20px;
+    }
+    @include responsive(xxs) {
+        padding: 20px 15px;
+    }
+}
+
+.product-add-left-wrapper {
+    padding: 10px;
+}
+
+.single-product-add {
+    .product-left-info {
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+        &.open {
+            .title {
+                &::after {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        &.show {
+            .product-add-list {
+                display: block;
+            }
+        }
+        .title {
+            background: var(--dashboard-color);
+            color: var(--heading-color);
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-size: 18px;
+            position: relative;
+            cursor: pointer;
+            &::after {
+                content: "\f107";
+                @include linefont;
+                position: absolute;
+                right: 20px;
+                transition: all .4s;
+            }
+        }
+        .product-add-list {
+            padding-left: 30px;
+            display: none;
+            .list {
+                &.selected {
+                    a {
+                        color: var(--customer-profile);
+                        &::before {
+                            background: var(--customer-profile);
+                        }
+                    }
+                }
+                a {
+                    font-size: 16px;
+                    font-weight: 400;
+                    display: inline-block;
+                    position: relative;
+                    padding-left: 20px;
+                    margin-top: 15px;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        height: 8px;
+                        width: 8px;
+                        border-radius: 50%;
+                        background: rgba(#ddd, .5);
+                        left: 0;
+                        top: 7px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.add-new-attr {
+    display: inline-block;
+    color: var(--light-color);
+    background: var(--dashboard-color);
+    padding: 7px 10px;
+    transition: all .3s;
+    &:hover {
+        color: $white;
+        background: var(--customer-profile);
+    }
+}
+
+.input-flex-inner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.delete-item {
+    font-size: 24px;
+}
+
+.dashboard-attr-flex {
+    display: flex;
+    align-items: center;
+    gap: 0 24px;
+    @include responsive(xl) {
+        flex-wrap: wrap;
+    }
+    @include responsive(lg) {
+        flex-wrap: wrap;
+    }
+    @include responsive(sm) {
+        flex-wrap: wrap;
+    }
+    .dashboard-input {
+        @include responsive(xl) {
+            flex-basis: 47%;
+        }
+        @include responsive(sm) {
+            flex-basis: 47%;
+        }
+        @include responsive(xs) {
+            flex-basis: 100%;
+        }
+    }
+}
+
+.add-new-category {
+    padding: 7px 15px;
+    &.dashboard-bg {
+        &:hover {
+            background: none;
+            color: var(--customer-profile);
+        }
+    }
+}

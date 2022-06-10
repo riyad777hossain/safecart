@@ -1,0 +1,491 @@
+/* Banner  */
+
+.banner-area {
+    position: relative;
+    z-index: 1;
+    padding: 0;
+    overflow: hidden;
+}
+
+.banner-middle-content {
+    position: relative;
+    z-index: 2;
+    .banner-middle-image {
+        position: relative;
+        z-index: 2;
+        @include responsive(xxl) {
+            &::before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                left: 0;
+                top: 0;
+                background: rgba($white, .3);
+            }
+        }
+        @include responsive(xl) {
+            &::before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                left: 0;
+                top: 0;
+                background: rgba($white, .3);
+            }
+        }
+        @include responsive(lg) {
+            &::before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                left: 0;
+                top: 0;
+                background: rgba($white, .3);
+            }
+        }
+        @include responsive(allPhone) {
+            &::before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                left: 0;
+                top: 0;
+                background: rgba($white, .3);
+            }
+        }
+        .banner-single-thumb {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            @include responsive(xs) {
+                display: none;
+            }
+            img {}
+        }
+        .middle-content {
+            max-width: 400px;
+            padding: 220px 0 220px 50px;
+            position: relative;
+            z-index: 5;
+            @include responsive(xxxl) {
+                padding: 180px 0 180px 50px;
+            }
+            @include responsive(xxl) {
+                padding: 134px 0 134px 50px;
+            }
+            @include responsive(xl) {
+                padding: 112px 0 112px 50px;
+            }
+            @include responsive(lg) {
+                padding: 120px 0 120px 50px;
+            }
+            @include responsive(allPhone) {
+                max-width: 330px;
+                padding: 150px 0 150px 40px;
+            }
+            @include responsive(xs) {
+                max-width: 300px;
+                padding: 120px 0 120px 40px;
+            }
+            @include responsive(vxxs) {
+                max-width: 250px;
+                padding: 80px 0 80px 40px;
+            }
+            .middle-span {
+                font-size: 22px;
+                line-height: 30px;
+                @include responsive(xxl) {
+                    color: var(--heading-color) !important;
+                }
+                @include responsive(xl) {
+                    font-size: 20px !important;
+                    color: var(--heading-color) !important;
+                }
+                @include responsive(lg) {
+                    font-size: 18px !important;
+                    color: var(--heading-color) !important;
+                }
+                @include responsive(allPhone) {
+                    font-size: 18px !important;
+                    color: var(--heading-color) !important;
+                }
+                @include responsive(vxxs) {
+                    font-size: 15px !important;
+                }
+            }
+            .banner-middle-title {
+                font-size: 46px;
+                line-height: 65px;
+                @include responsive(xl) {
+                    font-size: 40px;
+                    line-height: 50px;
+                }
+                @include responsive(lg) {
+                    font-size: 36px;
+                    line-height: 50px;
+                }
+                @include responsive(allPhone) {
+                    font-size: 32px;
+                    line-height: 1.2;
+                }
+                @include responsive(xs) {
+                    font-size: 28px;
+                }
+                @include responsive(vxxs) {
+                    font-size: 26px;
+                }
+                &:hover {
+                    color: var(--main-color-one);
+                }
+                &.hover-color-two {
+                    &:hover {
+                        color: var(--main-color-two);
+                    }
+                }
+                &.hover-color-three {
+                    &:hover {
+                        color: var(--main-color-three);
+                    }
+                }
+                &.hover-color-four {
+                    &:hover {
+                        color: var(--main-color-four);
+                    }
+                }
+            }
+            .btn-buy {
+                @include responsive(allPhone) {
+                    margin-top: 20px;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+.banner-right-image-content {
+    @include responsive(allPhone) {
+        margin-top: 24px;
+        display: flex;
+        align-items: flex-start;
+    }
+    @include responsive(sm) {
+        display: block;
+    }
+    .single-right-image {
+        @include responsive(lg) {
+            padding: 23px 0;
+        }
+        @include responsive(allPhone) {
+            &:not(:last-child) {
+                margin-bottom: 0;
+                margin-right: 24px;
+            }
+        }
+        @include responsive(sm) {
+            &:not(:last-child) {
+                margin-right: 0;
+                margin-bottom: 24px;
+            }
+        }
+    }
+}
+
+.single-right-image {
+    display: block;
+    position: relative;
+    z-index: 2;
+    padding: 0;
+    &:not(:last-child) {
+        margin-bottom: 35px;
+        @include responsive(allxl) {
+            margin-bottom: 25px;
+        }
+        @include responsive(lg) {
+            margin-bottom: 20px;
+        }
+    }
+    @include responsive(xl) {
+        &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background: rgba($white, .3);
+        }
+    }
+    @include responsive(lg) {
+        &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background: rgba($white, .3);
+        }
+    }
+    img {
+        margin: 0 auto;
+        text-align: center;
+    }
+    .banner-right-contents {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        right: 0;
+        text-align: left;
+        @include responsive(xl) {
+            top: 20px;
+            left: 20px;
+        }
+        @include responsive(lg) {
+            top: 20px;
+            left: 20px;
+        }
+        @include responsive(allPhone) {
+            top: 20px;
+            left: 20px;
+            font-size: 22px !important;
+        }
+        @include responsive(xs) {
+            font-size: 20px !important;
+        }
+    }
+    .banner-right-title {
+        text-transform: uppercase;
+        z-index: 9;
+        &:hover {
+            color: var(--main-color-one);
+        }
+    }
+    .btn-shop-right {
+        color: var(--main-color-one);
+        font-size: 18px;
+        font-weight: 500;
+        display: inline-block;
+        text-decoration: underline var(--main-color-one);
+    }
+}
+
+.banner-two {
+    padding-top: 5px;
+    .banner-middle-content {
+        .banner-middle-image {
+            .banner-single-thumb {
+                img {}
+            }
+            .middle-content {
+                max-width: 650px;
+                padding: 175px 0 175px 50px;
+                @include responsive(allxl) {
+                    max-width: 550px;
+                }
+                @include responsive(xxl) {
+                    max-width: 500px;
+                }
+                @include responsive(xl) {
+                    max-width: 500px;
+                    padding: 175px 0 175px 50px;
+                }
+                @include responsive(lg) {
+                    max-width: 450px;
+                    padding: 175px 0 175px 50px;
+                }
+                @include responsive(allPhone) {
+                    max-width: 400px;
+                }
+                @include responsive(sm) {
+                    padding: 170px 0 170px 30px;
+                }
+                @include responsive(xs) {
+                    padding: 90px 0 90px 30px;
+                }
+                @include responsive(xxs) {
+                    padding: 100px 0 100px 30px;
+                }
+                @include responsive(vxxs) {
+                    padding: 80px 0 80px 20px;
+                }
+                .middle-span {
+                    .percent {
+                        font-size: 30px;
+                        color: var(--main-color-two);
+                        @include responsive(allPhone) {
+                            font-size: 26px;
+                        }
+                        @include responsive(xs) {
+                            font-size: 24px;
+                        }
+                        @include responsive(xxs) {
+                            font-size: 22px;
+                        }
+                        @include responsive(vxxs) {
+                            font-size: 20px;
+                        }
+                    }
+                }
+                .banner-middle-title {
+                    font-size: 65px;
+                    line-height: 80px;
+                    text-transform: uppercase;
+                    @include responsive(allxl) {
+                        font-size: 50px;
+                        line-height: 65px;
+                    }
+                    @include responsive(xxl) {
+                        font-size: 45px;
+                    }
+                    @include responsive(xl) {
+                        font-size: 45px;
+                        line-height: 60px;
+                    }
+                    @include responsive(lg) {
+                        font-size: 40px;
+                        line-height: 55px;
+                    }
+                    @include responsive(allPhone) {
+                        font-size: 36px;
+                        line-height: 45px;
+                    }
+                    @include responsive(xs) {
+                        font-size: 32px;
+                        line-height: 40px;
+                    }
+                    @include responsive(xxs) {
+                        font-size: 30px;
+                    }
+                    @include responsive(vxxs) {
+                        font-size: 26px;
+                    }
+                    &:hover {
+                        color: var(--main-color-two);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.banner-right-sidebar {
+    @include responsive(xl) {
+        margin-top: 24px;
+    }
+    @include responsive(lg) {
+        margin-top: 24px;
+    }
+    @include responsive(allPhone) {
+        margin-top: 24px;
+    }
+}
+
+.banner-three {
+    .banner-middle-content {
+        .banner-middle-image {
+            .banner-single-thumb {
+                img {}
+            }
+            .middle-content {
+                max-width: 650px;
+                padding: 230px 0 230px 80px;
+                @include responsive(allxl) {
+                    max-width: 550px;
+                }
+                @include responsive(xxl) {
+                    max-width: 500px;
+                    padding: 250px 0 250px 80px;
+                }
+                @include responsive(xl) {
+                    max-width: 500px;
+                }
+                @include responsive(lg) {
+                    max-width: 450px;
+                }
+                @include responsive(allPhone) {
+                    max-width: 400px;
+                    padding: 170px 0 170px 50px;
+                }
+                @include responsive(sm) {
+                    padding: 170px 0 170px 30px;
+                }
+                @include responsive(xs) {
+                    padding: 100px 0 100px 30px;
+                }
+                @include responsive(vxxs) {
+                    padding: 80px 0 80px 20px;
+                }
+                .middle-span {
+                    .percent {
+                        font-size: 30px;
+                        color: var(--main-color-three);
+                        @include responsive(allPhone) {
+                            font-size: 26px;
+                        }
+                        @include responsive(xs) {
+                            font-size: 24px;
+                        }
+                        @include responsive(xxs) {
+                            font-size: 22px;
+                        }
+                        @include responsive(vxxs) {
+                            font-size: 20px;
+                        }
+                    }
+                }
+                .banner-middle-title {
+                    font-size: 60px;
+                    line-height: 80px;
+                    text-transform: uppercase;
+                    @include responsive(allxl) {
+                        font-size: 60px;
+                    }
+                    @include responsive(xxl) {
+                        font-size: 45px;
+                        line-height: 60px;
+                    }
+                    @include responsive(xl) {
+                        font-size: 45px;
+                        line-height: 60px;
+                    }
+                    @include responsive(lg) {
+                        font-size: 40px;
+                        line-height: 55px;
+                    }
+                    @include responsive(allPhone) {
+                        font-size: 36px;
+                        line-height: 45px;
+                    }
+                    @include responsive(xs) {
+                        font-size: 32px;
+                        line-height: 40px;
+                    }
+                    @include responsive(xxs) {
+                        font-size: 30px;
+                    }
+                    @include responsive(vxxs) {
+                        font-size: 26px;
+                    }
+                    &:hover {
+                        color: var(--main-color-three);
+                    }
+                }
+            }
+        }
+    }
+    .trendy-product-wrapper {
+        .single-trendy-products {
+            padding-top: 20px;
+        }
+        div[class*=col] {
+            &:nth-child(4n+1) {
+                .single-trendy-products {}
+            }
+        }
+    }
+}

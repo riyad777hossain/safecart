@@ -1,0 +1,197 @@
+/* Contacts Area  */
+
+.contact-area {}
+
+.contact-address-wrapper {}
+
+.contact-address-wrapper {
+    padding: 50px 100px;
+    @include responsive(xxl) {
+        padding: 50px 70px;
+    }
+    @include responsive(xl) {
+        padding: 50px 40px;
+    }
+    @include responsive(lg) {
+        padding: 50px 50px;
+    }
+    @include responsive(allPhone) {
+        padding: 50px 50px;
+    }
+    @include responsive(xs) {
+        padding: 40px 40px;
+    }
+    @include responsive(xxs) {
+        padding: 40px 30px;
+    }
+    @include responsive(vxxs) {
+        padding: 30px 20px;
+    }
+}
+
+.sub-title {
+    font-size: 18px;
+    line-height: 36px;
+    @include responsive(sm) {
+        font-size: 18px;
+    }
+    @include responsive(xs) {
+        font-size: 17px;
+    }
+    @include responsive(xxs) {
+        font-size: 16px;
+        line-height: 32px;
+    }
+    @include responsive(vxxs) {
+        font-size: 15px;
+    }
+}
+
+.contact-title {
+    font-size: 36px;
+    line-height: 43px;
+    @include responsive(xs) {
+        font-size: 32px;
+        line-height: 36px;
+    }
+    @include responsive(vxxs) {
+        font-size: 28px;
+    }
+}
+
+.address-contents {}
+
+.single-address {
+    &:not(:last-child) {
+        margin-bottom: 24px;
+    }
+    .address-subtitle {
+        font-size: 22px;
+        line-height: 36px;
+        display: block;
+        @include responsive(xs) {
+            font-size: 20px;
+        }
+        @include responsive(vxxs) {
+            font-size: 18px;
+        }
+    }
+    .main-address {
+        font-size: 16px;
+        line-height: 28px;
+        display: block;
+        color: var(--light-color);
+        transition: all .1s;
+        @include responsive(xs) {
+            font-size: 17px;
+        }
+        @include responsive(vxxs) {
+            font-size: 15px;
+        }
+        &:hover {
+            color: var(--main-color-one);
+            a {
+                text-decoration-color: var(--main-color-one);
+            }
+        }
+        a {
+            text-decoration: 3px solid $steam-color underline;
+            transition: all .1s;
+        }
+        &:not(:last-child) {
+            margin-bottom: 5px;
+        }
+    }
+}
+
+.input-label {
+    font-size: 18px;
+    font-weight: 500;
+    display: block;
+    @include responsive(xs) {
+        font-size: 16px;
+    }
+    @include responsive(vxxs) {
+        font-size: 15px;
+    }
+}
+
+.contact-form-wrapper {
+    padding-left: 50px;
+    @include responsive(xxl) {
+        padding-left: 30px;
+    }
+    @include responsive(xl) {
+        padding-left: 20px;
+    }
+    @include responsive(lg) {
+        padding-left: 0;
+    }
+    @include responsive(allPhone) {
+        padding-left: 0;
+    }
+}
+
+.single-flex-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    @include responsive(xxs) {
+        display: block;
+    }
+    .single-input {
+        width: 100%;
+        &:not(:first-child) {
+            margin-left: 24px;
+            @include responsive(xs) {
+                margin-left: 0;
+            }
+        }
+        .form--control {
+            width: 100%;
+            border: 1px solid rgba($steam-color, .4);
+            box-shadow: 0 0 10px transparent;
+            height: 60px;
+            padding: 0px 20px 0;
+            transition: all .2s;
+            &:focus {
+                border-color: rgba(var(--main-color-one-rgb), .3);
+                box-shadow: 0 0 10px rgba(var(--main-color-one-rgb), .05);
+            }
+        }
+        .form--message {
+            padding: 15px 20px 0;
+            height: 130px;
+        }
+    }
+}
+
+
+/* Contact Map */
+
+.contact-map {
+    iframe {
+        width: 100%;
+        height: 600px;
+        border-radius: 10px;
+        @include responsive(xl) {
+            height: 500px;
+        }
+        @include responsive(lg) {
+            height: 450px;
+        }
+        @include responsive(allPhone) {
+            max-height: 400px;
+        }
+        @include responsive(xs) {
+            max-height: 300px;
+        }
+        @include responsive(xxs) {
+            max-height: 270px;
+        }
+        @include responsive(vxxs) {
+            max-height: 220px;
+        }
+    }
+}

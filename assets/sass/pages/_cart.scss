@@ -1,0 +1,267 @@
+/* Cart  */
+
+.cart-area {}
+
+.cart-wrapper {}
+
+.table-list-content {
+    &.style-02 {
+        max-width: 1250px;
+        margin: 0 auto;
+    }
+    .custom--table {
+        // border-collapse: separate;
+        // border-spacing: 20px 0;
+        &.table-border {
+            border: 1px solid rgba($steam-color, .4);
+        }
+        thead {
+            &.head-bg {
+                background: rgba($steam-color, .4);
+            }
+            tr {
+                th {
+                    padding: 20px 5px;
+                    font-family: var(--rubik-font);
+                    font-size: 16px;
+                    font-weight: 400;
+                    @include responsive(xl) {
+                        white-space: nowrap;
+                    }
+                    &:first-child {
+                        padding-left: 20px;
+                    }
+                    &:last-child {
+                        padding-right: 20px;
+                    }
+                    &:nth-child(1) {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+        tbody {
+            tr {
+                border-bottom: 1px solid rgba($steam-color, .4);
+                position: relative;
+                z-index: 1;
+                td {
+                    &:first-child {
+                        padding-left: 20px;
+                    }
+                    &:last-child {
+                        padding-right: 20px;
+                        @include responsive(allPhone) {
+                            padding-right: 7px;
+                        }
+                    }
+                    .close-table-cart {
+                        position: unset;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: 5px;
+                        font-size: 20px;
+                        cursor: pointer;
+                        transition: all .3s;
+                        &:hover {
+                            color: var(--main-color-one);
+                            transform: translateY(-50%) scale(1.3);
+                        }
+                        @include responsive(allPhone) {
+                            top: 10px;
+                            right: auto;
+                            left: 10px;
+                            transform: translateY(0);
+                            background: var(--main-color-one);
+                            color: $white;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            height: 30px;
+                            width: 30px;
+                            margin-left: auto;
+                            margin-bottom: 10px;
+                            margin-right: 10px;
+                            &:hover {
+                                transform: translateY(0) scale(1.3);
+                                background: $white;
+                                color: var(--main-color-one);
+                            }
+                        }
+                    }
+                    .product-name-table {
+                        display: flex;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        @include responsive(xl) {
+                            flex-wrap: nowrap;
+                        }
+                        @include responsive(allPhone) {
+                            display: block;
+                            margin-right: 10px;
+                        }
+                        .thumbs {
+                            height: 170px;
+                            width: 150px;
+                            @include responsive(allPhone) {
+                                margin-left: auto;
+                                height: 120px;
+                                width: 120px;
+                            }
+                            img {}
+                        }
+                        .carts-contents {
+                            margin-left: 30px;
+                            text-align: left;
+                            flex: 1;
+                            @include responsive(xxl) {
+                                margin-left: 20px;
+                            }
+                            @include responsive(xl) {
+                                margin-left: 10px;
+                            }
+                            @include responsive(allPhone) {
+                                margin-left: 0px;
+                                text-align: right;
+                            }
+                            .name-title {
+                                font-size: 18px;
+                                font-weight: 500;
+                                @include responsive(allPhone) {
+                                    margin-top: 10px;
+                                }
+                            }
+                        }
+                    }
+                    &.price-td {
+                        font-weight: 500;
+                        @include responsive(allPhone) {
+                            margin-right: 10px;
+                        }
+                    }
+                    &.color-one {
+                        color: var(--main-color-one);
+                    }
+                    &.color-two {
+                        color: var(--main-color-two);
+                    }
+                    &.color-three {
+                        color: var(--main-color-three);
+                    }
+                    &.color-four {
+                        color: var(--main-color-four);
+                    }
+                    .product-quantity {
+                        position: relative;
+                        z-index: 2;
+                        margin: 0 auto;
+                        width: 120px;
+                        text-align: center;
+                        @include responsive(allPhone) {
+                            margin-right: 10px;
+                            margin-left: auto;
+                            display: inline-block;
+                        }
+                        .quantity-input {
+                            border: 1px solid rgba($steam-color, .4);
+                            width: 100%;
+                            position: relative;
+                            z-index: 1;
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                height: 100%;
+                                width: 1px;
+                                background: rgba($steam-color, .4);
+                            }
+                        }
+                        .substract,
+                        .plus {
+                            padding: 0 5px;
+                            left: 5px;
+                        }
+                        .plus {
+                            left: auto;
+                            right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.table-update-btn {
+    .btn-table {
+        font-size: 18px;
+        padding: 10px 30px;
+        color: var(--light-color);
+        display: inline-block;
+        transition: all .3s;
+        @include responsive(xxs) {
+            padding: 8px 18px;
+        }
+        @include responsive(vxxs) {
+            font-size: 16px;
+        }
+        &.btn-border-1 {
+            border: 1px solid rgba($steam-color, .4);
+        }
+        &:hover {
+            background: var(--main-color-one);
+            color: $white;
+            border-color: var(--main-color-one);
+        }
+    }
+}
+
+.coupon-wrapper {
+    padding: 50px;
+    @include responsive(xxl) {
+        padding: 35px 35px 40px;
+    }
+    @include responsive(xl) {
+        padding: 40px 30px;
+    }
+    @include responsive(lg) {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    @include responsive(allPhone) {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    @include responsive(xxs) {
+        padding: 30px;
+    }
+    @include responsive(vxxs) {
+        padding: 20px 10px;
+    }
+}
+
+.coupon-border {
+    border-top: 1px solid rgba($steam-color, .4);
+}
+
+.single-coupon-list {}
+
+.flex-coupon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .coupon-title {}
+    .coupon-price {}
+}
+
+.coupon-flex-list {
+    .list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+        color: var(--light-color);
+        font-size: 18px;
+    }
+}

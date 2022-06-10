@@ -1,0 +1,163 @@
+/* Global Flex Card */
+
+.global-flex-card {
+    &:hover {
+        .global-flex-item {
+            .global-item-image {
+                position: relative;
+                z-index: 1;
+                img {
+                    transform: rotate(5deg) scale(1.2);
+                }
+                .global-thumb-icons {
+                    visibility: visible;
+                    opacity: 1;
+                    top: 30px;
+                }
+            }
+        }
+    }
+    &.style-02 {
+        &:hover {
+            .global-flex-item {
+                .global-item-image {
+                    .global-thumb-icons {
+                        top: 10px;
+                    }
+                }
+            }
+        }
+        .global-flex-item {
+            .global-item-image {
+                max-width: 150px;
+                max-height: 150px;
+                .thumb-top-contents {
+                    .percent-box {
+                        font-size: 12px;
+                        padding: 3px 10px;
+                        line-height: 16px;
+                    }
+                }
+                .global-thumb-icons {
+                    .lists {
+                        a {
+                            height: 28px;
+                            width: 28px;
+                            font-size: 16px;
+                            border-radius: 0;
+                        }
+                    }
+                }
+            }
+            .global-item-contents {
+                margin-left: 20px;
+            }
+        }
+    }
+    .global-flex-item {
+        display: flex;
+        align-items: center;
+        @include responsive(sm) {
+            justify-content: center;
+        }
+        @include responsive(xxs) {
+            display: block;
+        }
+        .global-item-image {
+            display: initial;
+            height: 260px;
+            width: 260px;
+            overflow: hidden;
+            position: relative;
+            z-index: 2;
+            @include responsive(xxl) {
+                max-height: 220px;
+                max-width: 220px;
+            }
+            @include responsive(lg) {
+                max-height: 220px;
+                max-width: 220px;
+            }
+            @include responsive(xxs) {
+                display: block;
+            }
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                overflow: hidden;
+                transition: $transition;
+            }
+            .global-thumb-icons {
+                .lists {
+                    a {
+                        height: 35px;
+                        width: 35px;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+        .global-item-contents {
+            flex: 1;
+            margin-left: 30px;
+            @include responsive(xxl) {
+                margin-left: 20px;
+            }
+            @include responsive(allPhone) {
+                margin-left: 20px;
+            }
+            @include responsive(xxs) {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+            .title {
+                font-size: 18px;
+                line-height: 24px;
+                &:hover {
+                    color: var(--main-color-one);
+                }
+                &.hover-color-two {
+                    &:hover {
+                        color: var(--main-color-two);
+                    }
+                }
+                &.hover-color-three {
+                    &:hover {
+                        color: var(--main-color-three);
+                    }
+                }
+                &.hover-color-four {
+                    &:hover {
+                        color: var(--main-color-four);
+                    }
+                }
+            }
+            .price-update-through {}
+            .common-review-list {}
+        }
+    }
+}
+
+.product-bundle {
+    @include responsive(xxxl) {
+        max-height: 675px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    @include responsive(xxl) {
+        max-height: 620px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    .product-bundle-wrapper {
+        @include responsive(xl) {
+            max-height: 100%;
+            overflow: unset;
+        }
+        @include responsive(lg) {
+            max-height: 100%;
+            overflow: unset;
+        }
+    }
+}

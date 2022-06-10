@@ -1,0 +1,854 @@
+/* Topbar-bottom-area */
+
+.topbar-bottom-area {
+    padding: 30px 0 15px;
+    position: relative;
+    z-index: 99;
+    @include responsive(allPhone) {
+        padding: 10px 0;
+    }
+    &.index-03 {
+        padding: 15px 0;
+        z-index: 9;
+    }
+}
+
+.topbar-logo {}
+
+.index-02 {
+    .category-searchbar {
+        @include responsive(allPhone) {
+            z-index: 4;
+        }
+    }
+}
+
+.index-03 {
+    .category-searchbar {
+        @include responsive(allPhone) {
+            z-index: 4;
+        }
+    }
+}
+
+.category-searchbar {
+    position: relative;
+    z-index: 4;
+    .category-select {
+        position: absolute;
+        top: 0;
+        right: 70px;
+        .nice-select {
+            border: 0;
+            outline: none;
+            background: none;
+            color: var(--heading-color);
+            &::after {
+                right: 10px;
+            }
+        }
+    }
+    .form--control {
+        padding: 0 200px 0 20px;
+    }
+}
+
+.single-searchbar {
+    position: relative;
+}
+
+.form--control {
+    height: 55px;
+    font-size: 15px;
+    border: 1px solid $steam-color;
+    width: 100%;
+    padding: 0 100px 0 20px;
+    color: var(--extra-light-color);
+}
+
+.right-position-button {
+    position: absolute;
+    right: 0;
+    height: calc(100% - 4px);
+    padding: 0 20px;
+    font-size: 20px;
+    background: var(--main-color-one);
+    border: 0;
+    outline: none;
+    color: $white;
+    cursor: pointer;
+    &.margin-2 {
+        margin: 2px;
+    }
+}
+
+.topbar-bottom-right-content {
+    margin-left: 100px;
+    @include responsive(xl) {
+        margin-left: 30px;
+    }
+    @include responsive(lg) {
+        margin-left: 30px;
+    }
+    @include responsive(allPhone) {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+.topbar-bottom-right-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nicescroll-rails {
+    background: none;
+}
+
+.nicescroll-cursors {
+    background-color: var(--extra-light-color) !important;
+    width: 5px !important;
+}
+
+.search-suggestions .nicescroll-cursors {
+    background-color: var(--main-color-one) !important;
+    width: 5px !important;
+}
+
+.color-one {
+    .nicescroll-cursors {
+        background-color: var(--main-color-two) !important;
+    }
+}
+
+.color-two {
+    .nicescroll-cursors {
+        background-color: var(--main-color-two) !important;
+    }
+}
+
+.color-three {
+    .nicescroll-cursors {
+        background-color: var(--main-color-three) !important;
+    }
+}
+
+.searchbar-suggetions {
+    position: relative;
+    .search-suggestions {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: $white;
+        padding: 30px 20px;
+        box-shadow: 0 0 10px rgba($steam-color, .4);
+        visibility: hidden;
+        opacity: 0;
+        height: 550px;
+        overflow-y: hidden;
+        @include responsive(xxxl) {
+            height: 475px;
+        }
+        @include responsive(xxl) {
+            height: 475px;
+        }
+        @include responsive(xl) {
+            height: 475px;
+        }
+        @include responsive(lg) {
+            height: 475px;
+            padding: 30px 10px;
+        }
+        @include responsive(allPhone) {
+            height: 485px;
+        }
+        @include responsive(xxs) {
+            padding: 30px 10px;
+        }
+        // .search-inner {
+        //     height: calc(100vh - 180px);
+        //     overflow-y: scroll;
+        //     padding: 0 10px;
+        // }
+        &.show {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+.item-suggestions {
+    &:not(:last-child) {
+        margin-bottom: 40px;
+    }
+    .item-title {
+        font-size: 18px;
+        width: 100%;
+        background-color: rgba($steam-color, .2);
+        padding: 5px 10px;
+    }
+}
+
+.category-suggestion {
+    max-height: 300px;
+}
+
+.category-suggestion-list {
+    height: calc(300px - 200px);
+    overflow-y: scroll;
+    padding: 0 10px;
+    .list {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+        .item {
+            font-size: 16px;
+            color: var(--heading-color);
+            display: inline-block;
+            transition: all .3s;
+            &:hover {
+                color: var(--main-color-one);
+            }
+        }
+    }
+}
+
+.product-suggestion-list {
+    height: calc(100vh - 460px);
+    overflow-y: scroll;
+    padding: 0 10px;
+    .list {
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+    .item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        @include responsive(xxs) {
+            display: block;
+        }
+        .product-image {
+            border: 1px solid rgba($steam-color, .5);
+            padding: 5px 15px;
+            height: 100px;
+            width: 120px;
+            @include responsive(lg) {
+                width: 80px;
+                height: 100px;
+                padding: 10px 0px;
+            }
+        }
+        .product-info {
+            flex: 1;
+            .product-info-top {
+                @include responsive(xxs) {
+                    margin-top: 10px;
+                }
+                .product-name {
+                    font-size: 18px;
+                    line-height: 28px;
+                    @include responsive(lg) {
+                        font-size: 17px;
+                    }
+                }
+            }
+            .product-price {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 20px;
+                @include responsive(lg) {
+                    gap: 7px;
+                }
+                .price-update-through {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    .flash-price {
+                        font-size: 20px;
+                        color: var(--heading-color);
+                        @include responsive(lg) {
+                            font-size: 18px;
+                        }
+                    }
+                    .flash-old-prices {
+                        font-size: 15px;
+                        text-decoration: line-through;
+                    }
+                }
+                .main-price {
+                    font-size: 18px;
+                    @include responsive(lg) {
+                        font-size: 17px;
+                    }
+                }
+            }
+            .stock-out {
+                font-size: 16px;
+                background: var(--main-color-one);
+                color: $white;
+                padding: 5px 10px;
+                display: inline-block;
+                @include responsive(lg) {
+                    font-size: 15px;
+                    padding: 5px 5px;
+                }
+            }
+        }
+    }
+}
+
+.color-two {
+    .product-suggestion-list .item .product-info .stock-out {
+        background: var(--main-color-two);
+    }
+    .category-suggestion-list .list .item:hover {
+        color: var(--main-color-two);
+    }
+}
+
+.color-three {
+    .product-suggestion-list .item .product-info .stock-out {
+        background: var(--main-color-three);
+    }
+    .category-suggestion-list .list .item:hover {
+        color: var(--main-color-three);
+    }
+}
+
+.track-order {
+    font-size: 16px;
+    line-height: 28px;
+    color: var(--light-color);
+    &:hover {
+        color: var(--main-color-one);
+    }
+}
+
+.track-icon-list {
+    display: flex;
+    align-items: center;
+    &.white-color {
+        .single-icon {
+            .icon {
+                color: $white;
+                transition: all .3s;
+            }
+        }
+    }
+    .single-icon {
+        position: relative;
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+        .icon {
+            font-size: 26px;
+            color: var(--heading-color);
+            &:hover {
+                color: var(--main-color-one);
+            }
+            @include responsive(vxxs) {
+                font-size: 20px;
+            }
+        }
+        &.hover-color-two {
+            .icon {
+                &:hover {
+                    color: var(--main-color-two);
+                }
+            }
+        }
+        &.hover-color-three {
+            .icon {
+                &:hover {
+                    color: var(--main-color-three);
+                }
+            }
+        }
+        &.hover-color-four {
+            .icon {
+                &:hover {
+                    color: var(--main-color-four);
+                }
+            }
+        }
+        .icon-notification {
+            position: absolute;
+            top: -2px;
+            right: -10px;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 22px;
+            width: 22px;
+            background: var(--main-color-one);
+            color: $white;
+            border-radius: 50%;
+            @include responsive(vxxs) {
+                height: 18px;
+                width: 18px;
+                font-size: 12px;
+            }
+            &.bg-color-one {
+                background: var(--main-color-one);
+            }
+            &.bg-color-two {
+                background: var(--main-color-two);
+            }
+            &.bg-color-three {
+                background: var(--main-color-three);
+            }
+            &.bg-color-four {
+                background: var(--main-color-four);
+            }
+        }
+    }
+}
+
+.login-account {
+    position: relative;
+    z-index: 3;
+    transition: all .3s;
+    &:hover {
+        .account-list-item {
+            visibility: visible;
+            opacity: 1;
+            top: 100%;
+            background: $white;
+        }
+    }
+    .account-list-item {
+        position: absolute;
+        top: 130%;
+        right: 0;
+        background: $white;
+        z-index: 9998;
+        box-shadow: 0 0 10px rgba($steam-color, .2);
+        width: 120px;
+        background: $white;
+        visibility: hidden;
+        opacity: 1;
+        transition: all .2s;
+        display: block !important;
+        margin-left: 0 !important;
+        &.hover-color-two {
+            .list {
+                a {
+                    &:hover {
+                        background: var(--main-color-two);
+                    }
+                }
+            }
+        }
+        &.hover-color-three {
+            .list {
+                a {
+                    &:hover {
+                        background: var(--main-color-three);
+                    }
+                }
+            }
+        }
+        &.hover-color-four {
+            .list {
+                a {
+                    &:hover {
+                        background: var(--main-color-four);
+                    }
+                }
+            }
+        }
+        .list {
+            margin: 0 !important;
+            display: block !important;
+            a {
+                display: block;
+                font-size: 15px;
+                font-weight: 400;
+                padding: 10px 20px;
+                color: var(--heading-color);
+                border-bottom: 1px solid rgba($steam-color, .7);
+                transition: all .3s;
+                &:hover {
+                    background: var(--main-color-one);
+                    color: $white;
+                }
+            }
+        }
+    }
+    &.style-02 {
+        position: relative;
+        z-index: 9999;
+        .account-list-item {
+            .list {
+                a {
+                    &:hover {
+                        background: var(--main-color-three);
+                    }
+                }
+            }
+        }
+        .accounts {
+            color: $white;
+            background: var(--main-color-one);
+            padding: 10px 20px;
+            &:hover {
+                background: $white;
+                color: var(--main-color-one);
+                i {
+                    color: var(--main-color-one);
+                }
+            }
+            i {
+                color: $white;
+            }
+            &.bg-color-two {
+                background: var(--main-color-two);
+                &:hover {
+                    background: $white;
+                    color: var(--main-color-two);
+                    i {
+                        color: var(--main-color-two);
+                    }
+                }
+            }
+            &.bg-color-three {
+                background: var(--main-color-three);
+                &:hover {
+                    background: $white;
+                    color: var(--main-color-three);
+                    i {
+                        color: var(--main-color-three);
+                    }
+                }
+            }
+            &.bg-color-four {
+                background: var(--main-color-four);
+                &:hover {
+                    background: $white;
+                    color: var(--main-color-four);
+                    i {
+                        color: var(--main-color-four);
+                    }
+                }
+            }
+        }
+    }
+    &.white-color {
+        .accounts {
+            color: $white;
+            &:hover {
+                color: var(--main-color-one);
+                i {
+                    color: var(--main-color-one);
+                }
+            }
+            i {
+                color: $white;
+            }
+        }
+    }
+    .accounts {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--light-color);
+        transition: $transition;
+        &:hover {
+            color: var(--main-color-one);
+        }
+        &.hover-color-two {
+            i {
+                color: var(--main-color-two);
+            }
+            &:hover {
+                color: var(--main-color-two);
+                i {
+                    color: var(--main-color-two);
+                }
+            }
+        }
+        &.hover-color-three {
+            i {
+                color: var(--main-color-three);
+            }
+            &:hover {
+                color: var(--main-color-three);
+                i {
+                    color: var(--main-color-three);
+                }
+            }
+        }
+        &.hover-color-four {
+            i {
+                color: var(--main-color-four);
+            }
+            &:hover {
+                color: var(--main-color-four);
+                i {
+                    color: var(--main-color-four);
+                }
+            }
+        }
+        i {
+            font-size: 26px;
+            color: var(--main-color-one);
+            transition: $transition;
+            @include responsive(vxxs) {
+                font-size: 20px;
+            }
+        }
+        @include responsive(vxxs) {
+            gap: 5px;
+        }
+    }
+}
+
+.cart-shopping {
+    position: relative;
+    z-index: 2;
+    &:hover {
+        .addto-cart-contents {
+            visibility: visible;
+            opacity: 1;
+            top: 100%;
+            transform: scale(1);
+            @include responsive(allPhone) {
+                transform: translateX(0%) scale(1);
+            }
+            @include responsive(vxxs) {
+                transform: translateX(-15%);
+            }
+        }
+    }
+    .addto-cart-contents {
+        position: absolute;
+        right: 0;
+        top: 130%;
+        z-index: 3;
+        width: 400px;
+        background: $white;
+        box-shadow: 0 0 10px rgba($steam-color, .5);
+        padding: 20px;
+        visibility: hidden;
+        opacity: 0;
+        transform: scale(.5);
+        transition: all .3s;
+        @include responsive(allPhone) {
+            right: auto;
+            left: 0;
+            transform: translateX(0);
+        }
+        @include responsive(xxs) {
+            width: 320px;
+        }
+        @include responsive(xxs) {
+            width: 270px;
+            padding: 10px;
+            right: 100%;
+        }
+        .cart-total-amount {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 20px;
+        }
+    }
+    .single-addto-cart-wrappers {
+        max-height: 240px;
+        overflow-y: auto;
+    }
+    .single-addto-carts {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+        .addto-cart-flex-contents {
+            display: flex;
+            align-items: center;
+            .addto-cart-thumb {
+                height: 70px;
+                width: 70px;
+                margin-right: 10px;
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .addto-cart-img-contents {
+                .price-updates {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    .price-title {}
+                    .old-price {
+                        text-decoration: line-through;
+                    }
+                }
+            }
+        }
+    }
+    .btn-wrapper {
+        .cart-btn {
+            color: $white;
+            font-size: 16px;
+            font-weight: 500;
+            font-family: var(--body-font);
+            display: inline-block;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            line-height: 34px;
+            padding: 10px 35px;
+            border: 3px solid var(--main-color-one);
+            background-color: var(--main-color-one);
+            transition: all .3s;
+            @include responsive(allPhone) {
+                line-height: 28px;
+            }
+            @include responsive(xs) {
+                line-height: 24px;
+                font-size: 15px;
+            }
+            @include responsive(vxxs) {
+                padding: 8px 25px;
+                font-size: 14px;
+            }
+            &:hover {
+                background: none;
+                color: var(--main-color-one);
+            }
+            &.cart-btn-outline {
+                background: none;
+                color: var(--main-color-one);
+                border: 3px solid var(--main-color-one);
+                &:hover {
+                    background-color: var(--main-color-one);
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.color-two {
+    .right-position-button {
+        background: var(--main-color-two);
+    }
+    .track-icon-list .single-icon .icon:hover {
+        color: var(--main-color-two);
+    }
+    .track-icon-list .single-icon .icon-notification {
+        background: var(--main-color-two);
+    }
+    .cart-shopping .btn-wrapper .cart-btn {
+        background-color: var(--main-color-two);
+        border-color: var(--main-color-two);
+    }
+    .cart-shopping .btn-wrapper .cart-btn:hover {
+        color: var(--main-color-two);
+        background: none;
+    }
+    .cart-shopping .btn-wrapper .cart-btn.cart-btn-outline {
+        border: 3px solid var(--main-color-two);
+        background: none;
+        color: var(--main-color-two);
+    }
+    .cart-shopping .btn-wrapper .cart-btn.cart-btn-outline:hover {
+        background-color: var(--main-color-two);
+        color: $white;
+    }
+    .login-account .accounts i {
+        color: var(--main-color-two);
+    }
+    .login-account .accounts:hover {
+        color: var(--main-color-two);
+    }
+    .login-account .account-list-item .list a:hover {
+        background-color: var(--main-color-two);
+    }
+}
+
+.color-three {
+    .right-position-button {
+        background: var(--main-color-three);
+    }
+    .track-icon-list .single-icon .icon:hover {
+        color: var(--main-color-three);
+    }
+    .track-icon-list .single-icon .icon-notification {
+        background: var(--main-color-three);
+    }
+    .cart-shopping .btn-wrapper .cart-btn {
+        background-color: var(--main-color-three);
+        border-color: var(--main-color-three);
+    }
+    .cart-shopping .btn-wrapper .cart-btn:hover {
+        color: var(--main-color-three);
+        background: none;
+    }
+    .cart-shopping .btn-wrapper .cart-btn.cart-btn-outline {
+        border: 3px solid var(--main-color-three);
+        background: none;
+        color: var(--main-color-three);
+    }
+    .cart-shopping .btn-wrapper .cart-btn.cart-btn-outline:hover {
+        background-color: var(--main-color-three);
+        color: $white;
+    }
+    .login-account .accounts i {
+        color: var(--main-color-three);
+    }
+    .login-account .accounts:hover {
+        color: var(--main-color-three);
+    }
+    .login-account .account-list-item .list a:hover {
+        background-color: var(--main-color-three);
+    }
+}
+
+.color-four {
+    .right-position-button {
+        background: var(--main-color-four);
+    }
+    .track-icon-list .single-icon .icon:hover {
+        color: var(--main-color-four);
+    }
+    .track-icon-list .single-icon .icon-notification {
+        background: var(--main-color-four);
+    }
+    .cart-shopping .btn-wrapper .cart-btn {
+        background-color: var(--main-color-four);
+        border-color: var(--main-color-four);
+    }
+    .cart-shopping .btn-wrapper .cart-btn:hover {
+        color: var(--main-color-four);
+        background: none;
+    }
+    .cart-shopping .btn-wrapper .cart-btn.cart-btn-outline {
+        border: 3px solid var(--main-color-four);
+        background: none;
+        color: var(--main-color-four);
+    }
+    .cart-shopping .btn-wrapper .cart-btn.cart-btn-outline:hover {
+        background-color: var(--main-color-four);
+        color: $white;
+    }
+    .login-account .accounts i {
+        color: var(--main-color-four);
+    }
+    .login-account .accounts:hover {
+        color: var(--main-color-four);
+    }
+    .login-account .account-list-item .list a:hover {
+        background-color: var(--main-color-four);
+    }
+}

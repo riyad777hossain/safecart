@@ -1,0 +1,140 @@
+/* Side Left area */
+
+.sidebar-wrapper {
+    padding: 25px 20px;
+}
+
+.sidebar-title {
+    font-size: 28px;
+    line-height: 40px;
+    margin: -4px 0 0;
+}
+
+.sidebar-countdown-area {
+    @include responsive(allPhone) {
+        margin-top: 30px;
+    }
+}
+
+// Trending Product
+.trending-product-area {}
+
+.trendy-product-wrapper {
+    .single-trendy-products {
+        &.style-02 {
+            .trendy-flex-content {
+                .trendy-thumb {
+                    height: 112px;
+                }
+            }
+        }
+        .trendy-flex-content {
+            display: flex;
+            align-items: center;
+            @include responsive(vxxs) {
+                display: block;
+            }
+            .trendy-thumb {
+                margin-right: 20px;
+                max-width: 120px;
+                max-height: 120px;
+                padding: 10px;
+                @include responsive(xxl) {
+                    margin-right: 8px;
+                    max-height: 120px;
+                }
+                @include responsive(xl) {
+                    margin-right: 15px;
+                }
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .products-contents {
+                flex: 1;
+                @include responsive(vxxs) {
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+}
+
+// News Update
+.news-area {}
+
+.news-wrapper {}
+
+.single-news-update {
+    .news-flex-content {
+        display: flex;
+        align-items: center;
+        @include responsive(vxxs) {
+            display: block;
+        }
+        .news-update-thumb {
+            margin-right: 15px;
+            max-width: 150px;
+            max-height: 120px;
+            overflow: hidden;
+            @include responsive(xxl) {
+                max-width: 115px;
+                margin-right: 10px;
+                height: 110px;
+            }
+            @include responsive(xl) {
+                max-width: 120px;
+                margin-right: 10px;
+            }
+            @include responsive(md) {
+                max-width: 115px;
+            }
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        .news-update-contents {
+            flex: 1;
+            @include responsive(vxxs) {
+                margin-top: 15px;
+            }
+            .common-title-two {}
+            .dates {
+                font-size: 16px;
+                line-height: 28px;
+            }
+        }
+    }
+}
+
+
+/* Gift Voucher */
+
+.gift-voucher-area {}
+
+.gift-voucher-inner {
+    position: relative;
+    z-index: 1;
+}
+
+.gift-voucher-contents {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 9;
+    .gift-voucher-title {
+        font-size: 52px;
+        line-height: 62px;
+        .voucher-small {
+            font-size: 36px;
+            display: block;
+            line-height: 43px;
+        }
+    }
+}

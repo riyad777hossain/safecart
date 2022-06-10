@@ -1,0 +1,117 @@
+/* Save area */
+
+.save-area {}
+
+.save-inner-wrapper {
+    padding: 30px 100px 0;
+    @include responsive(xxxl) {
+        padding: 30px 60px 0;
+    }
+    @include responsive(xxl) {
+        padding: 30px 30px 0;
+    }
+    @include responsive(xl) {
+        padding: 30px 50px 0;
+    }
+    @include responsive(lg) {
+        padding: 30px 30px 0;
+    }
+    @include responsive(allPhone) {
+        padding: 20px 30px 0;
+    }
+    @include responsive(vxxs) {
+        padding: 20px 20px 0;
+    }
+}
+
+.single-save-wrapper {
+    @include responsive(allPhone) {
+        margin-bottom: 30px;
+    }
+}
+
+.save-flex-contents {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .save-contents {
+        margin-right: 10px;
+    }
+}
+
+.save-contents {
+    .save-subtitle {
+        font-size: 22px;
+        line-height: 30px;
+        @include responsive(xxxl) {
+            font-size: 20px;
+            line-height: 28px;
+        }
+        @include responsive(xl) {
+            font-size: 20px;
+            line-height: 28px;
+        }
+        @include responsive(lg) {
+            font-size: 20px;
+            line-height: 28px;
+        }
+        @include responsive(allPhone) {
+            font-size: 20px;
+            line-height: 28px;
+        }
+        @include responsive(xs) {
+            font-size: 18px;
+            line-height: 28px;
+        }
+        @include responsive(vxxs) {
+            font-size: 17px;
+        }
+    }
+    .save-title {
+        font-size: 46px;
+        line-height: 65px;
+        @include responsive(xxxl) {
+            font-size: 40px;
+            line-height: 60px;
+        }
+        @include responsive(xxl) {
+            font-size: 38px;
+            line-height: 55px;
+        }
+        @include responsive(xl) {
+            font-size: 38px;
+            line-height: 55px;
+        }
+        @include responsive(lg) {
+            font-size: 36px;
+            line-height: 48px;
+        }
+        @include responsive(allPhone) {
+            font-size: 36px;
+            line-height: 48px;
+        }
+        @include responsive(xs) {
+            font-size: 32px;
+            line-height: 42px;
+        }
+        @include responsive(xxs) {
+            font-size: 30px;
+            line-height: 36px;
+        }
+        @include responsive(vxxs) {
+            font-size: 28px;
+        }
+    }
+}
+
+.save-button {
+    @include responsive(sm) {
+        margin-top: 20px;
+    }
+    .btn-wrapper {
+        .btn-bg-white {
+            border: 2px solid $white;
+        }
+    }
+}

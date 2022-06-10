@@ -1,0 +1,191 @@
+/* Instagram area */
+
+.instagram-area {}
+
+.instagram-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+.single-instagram {
+    .instagram-image {
+        max-height: 270px;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        &:hover {
+            &::before {
+                visibility: visible;
+                opacity: 1;
+                transform: scale(1);
+            }
+            .icon {
+                visibility: visible;
+                opacity: 1;
+                transform: translate(-50%, -50%) rotateY(180deg);
+            }
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background: rgba($black, .3);
+            transform: scale(0);
+            transition: all .4s;
+        }
+        @include responsive(xxxl) {
+            height: 280px;
+        }
+        @include responsive(xxl) {
+            height: 250px;
+        }
+        @include responsive(xl) {
+            height: 240px;
+        }
+        @include responsive(lg) {
+            height: 250px;
+        }
+        @include responsive(allPhone) {
+            height: auto;
+        }
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        .icon {
+            font-size: 30px;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            width: 50px;
+            background-color: $white;
+            visibility: hidden;
+            opacity: 0;
+            transition: all .5s;
+            @include responsive(xxs) {
+                height: 40px;
+                width: 40px;
+                font-size: 24px;
+            }
+            &:hover {
+                color: $white !important;
+                background-color: var(--main-color-one);
+            }
+            &.hover-color-two {
+                &:hover {
+                    color: var(--main-color-two);
+                }
+            }
+            &.hover-color-three {
+                &:hover {
+                    color: var(--main-color-three);
+                }
+            }
+            &.hover-color-four {
+                &:hover {
+                    color: var(--main-color-four);
+                }
+            }
+        }
+    }
+}
+
+.instagram-flex-wrapper {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    .single-instagram {
+        flex-basis: 28.99%;
+        margin-top: 24px;
+        margin-right: 24px;
+        @include responsive(xxxl) {
+            flex-basis: 28.32%;
+        }
+        @include responsive(xxl) {
+            flex-basis: 27.25%;
+        }
+        @include responsive(xl) {
+            flex-basis: 14.80%;
+        }
+        @include responsive(lg) {
+            flex-basis: 14.43%;
+        }
+        @include responsive(allPhone) {
+            flex-basis: 13.61%;
+        }
+        @include responsive(sm) {
+            flex-basis: 29.95%;
+        }
+        @include responsive(xs) {
+            flex-basis: 29%;
+        }
+        @include responsive(xxs) {
+            flex-basis: 28%;
+        }
+        @include responsive(vxxs) {
+            flex-basis: 45.28%;
+        }
+        &:nth-of-type(3n+3) {
+            margin-right: 0;
+            @include responsive(xl) {
+                margin-right: 24px;
+            }
+            @include responsive(lg) {
+                margin-right: 24px;
+            }
+            @include responsive(allPhone) {
+                margin-right: 24px;
+            }
+            @include responsive(sm) {
+                margin-right: 0px;
+            }
+            @include responsive(vxxs) {
+                margin-right: 24px;
+            }
+        }
+        &:nth-of-type(3n+6) {
+            @include responsive(xl) {
+                margin-right: 0px;
+            }
+            @include responsive(lg) {
+                margin-right: 0px;
+            }
+            @include responsive(allPhone) {
+                margin-right: 0px;
+            }
+        }
+        &:nth-of-type(2n+2) {
+            @include responsive(vxxs) {
+                margin-right: 0px;
+            }
+        }
+        .instagram-thumb {
+            max-height: 108px;
+            max-width: 108px;
+            @include responsive(xl) {
+                max-height: 100%;
+                max-width: 100%;
+            }
+            @include responsive(lg) {
+                max-height: 100%;
+                max-width: 100%;
+            }
+            @include responsive(allPhone) {
+                max-height: 100%;
+                max-width: 100%;
+            }
+            img {}
+        }
+    }
+}

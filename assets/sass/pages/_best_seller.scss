@@ -1,0 +1,83 @@
+/* Best Seller Area */
+
+.best-seller-area {}
+
+.best-seller-item {
+    &:hover {
+        .seller-thumb {
+            img {
+                transform: rotate(5deg) scale(1.2);
+            }
+        }
+        .thumb-brand {
+            transform: rotateY(180deg);
+        }
+    }
+    &.style-02 {
+        padding: 30px;
+        .thumb-brand {
+            margin: 0 auto;
+        }
+    }
+    .seller-thumb {
+        overflow: hidden;
+        max-width: 260px;
+        max-height: 260px;
+        margin: 0 auto;
+        @include responsive(xxs) {
+            margin: 0 auto;
+            max-height: 260px;
+            max-width: 260px;
+        }
+        img {
+            transition: all .3s;
+        }
+    }
+    .thumb-brand {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 80px;
+        width: 80px;
+        background-color: $brand-color-1;
+        margin: -60px auto 0;
+        position: relative;
+        z-index: 9;
+        transition: all .3s;
+        &.brand-thumb-border {
+            border: 3px solid $white;
+        }
+        img {}
+    }
+    .best-seller-contents {
+        .common-title-two {}
+    }
+}
+
+.slick-slide {
+    &:nth-child(6n+2) {
+        .thumb-brand {
+            background-color: $brand-color-2;
+        }
+    }
+    &:nth-child(6n+3) {
+        .thumb-brand {
+            background-color: $brand-color-3;
+        }
+    }
+    &:nth-child(6n+4) {
+        .thumb-brand {
+            background-color: $brand-color-4;
+        }
+    }
+    &:nth-child(6n+5) {
+        .thumb-brand {
+            background-color: $brand-color-5;
+        }
+    }
+    &:nth-child(6n+6) {
+        .thumb-brand {
+            background-color: $brand-color-6;
+        }
+    }
+}

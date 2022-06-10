@@ -1,0 +1,47 @@
+/* Promo area */
+
+.promo-area {
+    overflow: hidden;
+}
+
+.single-promo {
+    padding: 30px;
+    box-shadow: 0 0 10px #f7f7f7;
+    @include responsive(xxl) {
+        margin: 0;
+        padding: 30px 10px;
+    }
+    @include responsive(xl) {
+        margin: 0;
+        padding: 30px 10px;
+    }
+    @include responsive(allPhone) {
+        padding: 20px;
+    }
+    @include responsive(xs) {
+        margin: 0;
+    }
+    &.sidebar-promo {
+        display: block;
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+    }
+    .promo-inner {
+        display: flex;
+        align-items: center;
+        @include responsive(vxxs) {
+            display: block;
+        }
+    }
+    .icon {
+        font-size: 45px;
+        margin-right: 20px;
+    }
+    .contents {
+        .common-title {}
+        .common-para {
+            margin-top: 10px;
+        }
+    }
+}

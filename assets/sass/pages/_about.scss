@@ -1,0 +1,110 @@
+/* About area */
+
+.about-area {}
+
+.about-thumb-contents {}
+
+.about-flex-thumb {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-thumb {
+    &:not(:first-child) {
+        margin-left: 24px;
+        @include responsive(xxs) {
+            margin-left: 15px;
+        }
+    }
+    img {}
+}
+
+.about-contents-wrapper {
+    padding-left: 55px;
+    @include responsive(xxxl) {
+        padding-left: 40px;
+    }
+    @include responsive(xxl) {
+        padding-left: 30px;
+    }
+    @include responsive(xl) {
+        padding-left: 30px;
+    }
+    @include responsive(lg) {
+        padding-left: 20px;
+    }
+    @include responsive(allPhone) {
+        padding-left: 0;
+    }
+}
+
+.about-paragraph {
+    .para {
+        font-size: 18px;
+        line-height: 36px;
+        @include responsive(xxl) {
+            font-size: 17px;
+            line-height: 36px;
+        }
+        @include responsive(xl) {
+            font-size: 16px;
+            line-height: 32px;
+        }
+        @include responsive(lg) {
+            font-size: 16px;
+            line-height: 28px;
+        }
+        @include responsive(allPhone) {
+            font-size: 16px;
+            line-height: 28px;
+        }
+    }
+}
+
+.about-contents {
+    @include responsive(allPhone) {
+        margin-top: 20px;
+    }
+    .about-top {
+        font-size: 20px;
+        line-height: 26px;
+        @include responsive(allPhone) {
+            font-size: 18px;
+        }
+        @include responsive(xxs) {
+            font-size: 16px;
+        }
+    }
+    .about-title {
+        font-size: 46px;
+        line-height: 65px;
+        @include responsive(allPhone) {
+            font-size: 40px;
+            line-height: 55px;
+        }
+        @include responsive(xl) {
+            font-size: 42px;
+            line-height: 60px;
+        }
+        @include responsive(lg) {
+            font-size: 42px;
+            line-height: 60px;
+        }
+        @include responsive(sm) {
+            font-size: 36px;
+            line-height: 48px;
+        }
+        @include responsive(xs) {
+            font-size: 32px;
+            line-height: 36px;
+        }
+        @include responsive(xxs) {
+            font-size: 28px;
+            line-height: 32px;
+        }
+        @include responsive(vxxs) {
+            font-size: 26px;
+        }
+    }
+}

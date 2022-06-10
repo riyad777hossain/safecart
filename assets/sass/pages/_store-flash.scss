@@ -1,0 +1,348 @@
+/* Store Area */
+
+.store-area {
+    position: relative;
+    z-index: 1;
+}
+
+.flash-contents-wrapper {
+    display: flex;
+    align-items: flex-start;
+    @include responsive(allPhone) {
+        display: block;
+    }
+    .global-card-contents {
+        padding: 25px 50px 30px;
+        @include responsive(vxxs) {
+            padding: 25px 30px 30px;
+        }
+        .global-card-left {
+            @include responsive(vxxs) {
+                justify-content: center;
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.flash-wrapper-single {
+    max-width: 405px;
+    height: 100%;
+    flex: none;
+    margin-right: 30px;
+    @include responsive(allPhone) {
+        margin: 0 auto;
+    }
+}
+
+.flash-store-sliders {
+    // margin: 0 5px;
+    .slick-slider-items {
+        // border: 1px solid rgba($steam-color, .3);
+    }
+    &.nav-style-two {
+        .prev-icon,
+        .next-icon {
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+    &:hover {
+        &.nav-style-two {
+            .prev-icon,
+            .next-icon {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.flash-right-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    @include responsive(xxl) {
+        max-height: 660px;
+        overflow-y: scroll;
+    }
+    @include responsive(xl) {
+        max-height: 660px;
+        overflow-y: scroll;
+    }
+    @include responsive(lg) {
+        max-height: 660px;
+        overflow-y: scroll;
+    }
+    &.style-02 {
+        .flash-item-image {
+            max-height: 130px;
+            max-width: 120px;
+        }
+        .flash-item-contents {
+            margin-left: 15px !important;
+        }
+    }
+    .flash-col-items {
+        width: calc((100% / 3) - 15px);
+        margin-top: 24px;
+        @include responsive(xxxl) {
+            width: calc((100% / 3) - 23px);
+        }
+        @include responsive(xxl) {
+            width: calc((100% / 2) - 18px);
+        }
+        @include responsive(xl) {
+            width: calc((100% / 2) - 18px);
+        }
+        @include responsive(lg) {
+            width: calc((100% / 1) - 15px);
+        }
+        @include responsive(allPhone) {
+            width: calc((100% / 2) - 12px);
+        }
+        &:nth-child(2n+2) {
+            @include responsive(allPhone) {
+                margin-right: 0px;
+            }
+        }
+        @include responsive(sm) {
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+}
+
+.grid-item-four {
+    justify-content: flex-start;
+    .flash-col-items {
+        width: calc((100% / 4) - 18px);
+        margin-right: 24px;
+        &:nth-of-type(4n+4) {
+            margin-right: 0;
+            @include responsive(xl) {
+                margin-right: 24px;
+            }
+            @include responsive(xxl) {
+                margin-right: 24px;
+            }
+        }
+        &:nth-of-type(3n+3) {
+            @include responsive(xl) {
+                margin-right: 0px;
+            }
+            @include responsive(xxl) {
+                margin-right: 0px;
+            }
+        }
+        &:nth-child(2n+2) {
+            @include responsive(lg) {
+                margin-right: 0px;
+            }
+            @include responsive(allPhone) {
+                margin-right: 0px;
+            }
+        }
+        @include responsive(xxxl) {
+            width: calc((100% / 4) - 18px);
+        }
+        @include responsive(xxl) {
+            width: calc((100% / 3) - 16px);
+        }
+        @include responsive(xl) {
+            width: calc((100% / 3) - 16px);
+        }
+        @include responsive(lg) {
+            width: calc((100% / 2) - 12px);
+        }
+        @include responsive(allPhone) {
+            width: calc((100% / 2) - 12px);
+        }
+        @include responsive(sm) {
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+}
+
+.single-flash-item {
+    &.style-02 {
+        .flash-flex-item {
+            .flash-item-image {
+                .flash-thumb-icons {
+                    .lists {
+                        .icon {
+                            height: 28px;
+                            width: 28px;
+                            font-size: 16px;
+                            border-radius: 0;
+                        }
+                    }
+                }
+                .thumb-top-contents {
+                    .percent-box {
+                        font-size: 12px;
+                        line-height: 16px;
+                        padding: 3px 10px;
+                    }
+                }
+            }
+        }
+    }
+    &:hover {
+        .flash-flex-item {
+            .flash-item-image {
+                position: relative;
+                z-index: 1;
+                img {
+                    transform: scale(1.2);
+                }
+                .flash-thumb-icons {
+                    visibility: visible;
+                    opacity: 1;
+                    bottom: 20px;
+                }
+            }
+        }
+    }
+    .flash-flex-item {
+        display: flex;
+        align-items: center;
+        @include responsive(sm) {
+            justify-content: center;
+        }
+        @include responsive(vxxs) {
+            display: block;
+        }
+        .flash-item-image {
+            display: initial;
+            height: 194px;
+            width: 200px;
+            overflow: hidden;
+            position: relative;
+            z-index: 2;
+            @include responsive(xxl) {
+                height: 160px;
+            }
+            @include responsive(lg) {
+                height: 150px;
+            }
+            @include responsive(xxs) {
+                height: 170px;
+                width: 170px;
+            }
+            @include responsive(vxxs) {
+                display: block;
+                margin-bottom: 15px;
+            }
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                overflow: hidden;
+                transition: $transition;
+            }
+            .flash-thumb-icons {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                bottom: -100px;
+                right: 0px;
+                left: 0;
+                text-align: center;
+                z-index: 9;
+                visibility: hidden;
+                opacity: 0;
+                transition: all .4s;
+                &.hover-color-two {
+                    .lists {
+                        .icon {
+                            &:hover {
+                                background-color: var(--main-color-two);
+                            }
+                        }
+                    }
+                }
+                &.hover-color-three {
+                    .lists {
+                        .icon {
+                            &:hover {
+                                background-color: var(--main-color-three);
+                            }
+                        }
+                    }
+                }
+                &.hover-color-four {
+                    .lists {
+                        .icon {
+                            &:hover {
+                                background-color: var(--main-color-four);
+                            }
+                        }
+                    }
+                }
+                .lists {
+                    &:not(:last-child) {
+                        margin-right: 5px;
+                    }
+                    .icon {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 36px;
+                        width: 36px;
+                        border-radius: 5px;
+                        background: $white;
+                        color: var(--light-color);
+                        font-size: 16px;
+                        box-shadow: 0 0 5px rgba($steam-color, .2);
+                        transition: all .3s;
+                        &:hover {
+                            background: var(--main-color-one);
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+        .flash-item-contents {
+            flex: 1;
+            margin-left: 20px;
+            @include responsive(vxxs) {
+                margin-left: 0;
+            }
+            .title {
+                font-size: 18px;
+                line-height: 24px;
+                transition: all .3s;
+                &:hover {
+                    color: var(--main-color-one);
+                }
+                &.hover-color-two {
+                    &:hover {
+                        color: var(--main-color-two);
+                    }
+                }
+                &.hover-color-three {
+                    &:hover {
+                        color: var(--main-color-three);
+                    }
+                }
+                &.hover-color-four {
+                    &:hover {
+                        color: var(--main-color-four);
+                    }
+                }
+            }
+        }
+    }
+}

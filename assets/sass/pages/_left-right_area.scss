@@ -1,0 +1,16 @@
+/* Left Right area */
+
+.left-right-area {}
+
+.left-right-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    .wrapper-left {
+        flex-basis: 25%;
+        margin-right: 24px;
+    }
+    .wrapper-right {
+        flex-basis: 75%;
+    }
+}

@@ -1,0 +1,2923 @@
+/* Dashboard area */
+
+.admin-dashboard-padding-30 {
+    padding: 30px;
+    @include responsive(xxs) {
+        padding: 20px;
+    }
+    @include responsive(vxxs) {
+        padding: 20px 15px;
+    }
+}
+
+.dashboard-area {
+    background: var(--dashboard-color);
+}
+
+.color-profile {
+    color: var(--customer-profile);
+}
+
+.dashboard-common-title {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.dashboard-common-title-two {
+    font-size: 24px;
+    line-height: 32px;
+    margin: -7px 0 0;
+    @include responsive(allPhone) {
+        font-size: 23px;
+    }
+    @include responsive(xs) {
+        font-size: 22px;
+    }
+    @include responsive(vxxs) {
+        font-size: 21px;
+    }
+}
+
+.dashboard-pagination {
+    .pagination {
+        li {
+            margin: 5px 10px;
+            @include responsive(lg) {
+                margin: 5px 5px;
+            }
+            @include responsive(allPhone) {
+                margin: 5px 5px;
+            }
+            &.active {
+                .page-link {
+                    background: var(--customer-profile);
+                    color: $white;
+                    border-color: transparent;
+                }
+            }
+            .page-link {
+                background: $white;
+                color: #666;
+                border: 1px solid;
+                font-size: 16px;
+                -webkit-box-shadow: 0 0 10px rgba($black, .05);
+                box-shadow: 0 0 10px rgba($black, .05);
+                padding: 8px 17px;
+                display: inline-block;
+                cursor: pointer;
+                border-radius: 5px;
+                -webkit-transition: all .3s;
+                -o-transition: all .3s;
+                transition: all .3s;
+                &:hover {
+                    background: var(--customer-profile);
+                    color: $white;
+                    border-color: transparent;
+                }
+                @include responsive(allPhone) {
+                    font-size: 16px;
+                    padding: 7px 15px;
+                }
+                @include responsive(xxs) {
+                    font-size: 15px;
+                    padding: 5px 10px;
+                }
+            }
+        }
+    }
+}
+
+.badge-notification {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    height: 22px;
+    width: 22px;
+    background: var(--main-color-one);
+    color: $white;
+    border-radius: 3px;
+}
+
+.showing-contents {
+    @include responsive(xs) {
+        text-align: center;
+    }
+}
+
+.dashboard-padding {
+    padding: 50px;
+    @include responsive(xxxl) {
+        padding: 40px;
+    }
+    @include responsive(xxl) {
+        padding: 30px;
+    }
+    @include responsive(xl) {
+        padding: 20px;
+    }
+    @include responsive(lg) {
+        padding: 20px;
+    }
+    @include responsive(allPhone) {
+        padding: 30px;
+    }
+    @include responsive(xxs) {
+        padding: 20px;
+    }
+    @include responsive(vxxs) {
+        padding: 20px 10px;
+    }
+}
+
+.dashboard-contents-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    gap: 35px;
+    @include responsive(xl) {
+        gap: 24px;
+    }
+    @include responsive(lg) {
+        gap: 24px;
+    }
+    @include responsive(allPhone) {
+        display: block;
+    }
+}
+
+.dashboard-left-content .nicescroll-rails {
+    background: none;
+}
+
+.dashboard-left-content .nicescroll-cursors {
+    background-color: var(--customer-profile) !important;
+    width: 5px !important;
+}
+
+.dashboard-left-content {
+    background: $white;
+    text-align: center;
+    height: 100%;
+    padding: 0;
+    border-radius: 20px;
+    display: block;
+    padding: 40px 20px;
+    width: 335px;
+    height: calc(100vh - 100px);
+    // overflow-y: auto;
+    overflow-y: hidden;
+    position: fixed;
+    z-index: 99;
+    @include responsive(xxxl) {
+        height: calc(100vh - 80px);
+    }
+    @include responsive(xxl) {
+        height: calc(100vh - 60px);
+    }
+    @include responsive(xl) {
+        height: calc(100vh - 40px);
+    }
+    @include responsive(lg) {
+        height: calc(100vh - 40px);
+        padding: 30px 10px;
+        width: 300px;
+    }
+    @include responsive(allPhone) {
+        height: 100vh;
+    }
+    @include responsive(vxxs) {
+        max-width: 280px;
+    }
+}
+
+.dashboard-top {
+    .dashboard-logo {}
+}
+
+.dashboard-bottom {
+    height: calc(100vh - 275px);
+    overflow-y: auto;
+    padding: 0 7px;
+    @include responsive(allPhone) {
+        height: calc(100vh - 175px);
+    }
+}
+
+.dashboard-list {
+    .list {
+        &.active {
+            >a {
+                background: var(--customer-profile);
+                font-weight: 500;
+                color: $white;
+            }
+        }
+        &.has-children {
+            &.open {
+                >a {
+                    &::after {
+                        content: "\f068";
+                    }
+                }
+            }
+            >a {
+                position: relative;
+                &::after {
+                    content: "\f067";
+                    @include linefont;
+                    position: absolute;
+                    right: 15px;
+                    font-size: 18px;
+                }
+            }
+        }
+        &.show {
+            >.submenu {
+                display: block;
+            }
+        }
+        a {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 18px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            color: var(--heading-color);
+            font-family: var(--rubik-font);
+            gap: 15px;
+            padding: 14px 15px;
+            cursor: pointer;
+            border-radius: 10px;
+            -webkit-transition: all .3s;
+            -o-transition: all .3s;
+            transition: all .3s;
+        }
+        >.submenu {
+            padding-left: 40px;
+            display: none;
+            .list {
+                &.has-children {
+                    >a {
+                        font-size: 16px;
+                    }
+                }
+                &.selected {
+                    a {
+                        color: var(--customer-profile);
+                        &::before {
+                            background: var(--customer-profile);
+                        }
+                    }
+                }
+                a {
+                    font-size: 14px;
+                    line-height: 22px;
+                    padding: 3px 0 3px 15px;
+                    position: relative;
+                    font-weight: 400;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                        height: 6px;
+                        width: 6px;
+                        background: #999;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.dashboard-right-contents {
+    flex: 1;
+    margin-left: 370px;
+    @include responsive(xl) {
+        margin-left: 360px;
+    }
+    @include responsive(lg) {
+        margin-left: 330px;
+    }
+    @include responsive(allPhone) {
+        margin-left: 0;
+    }
+}
+
+
+/* Dashboard Top Contents */
+
+.dashboard-top-contents {
+    background: $white;
+    padding: 20px 30px;
+    border-radius: 20px;
+    @include responsive(xl) {
+        padding: 20px 30px;
+    }
+    @include responsive(lg) {
+        padding: 20px 30px;
+    }
+    @include responsive(allPhone) {
+        padding: 20px 20px;
+    }
+    @include responsive(xxs) {
+        padding: 20px 15px;
+    }
+}
+
+.heading-two {
+    font-size: 36px;
+    @include responsive(allPhone) {
+        font-size: 32px;
+    }
+    @include responsive(sm) {
+        font-size: 30px;
+    }
+    @include responsive(xs) {
+        font-size: 28px;
+    }
+    @include responsive(xxs) {
+        font-size: 26px;
+    }
+}
+
+.heading-three {
+    font-size: 28px;
+    @include responsive(allPhone) {
+        font-size: 26px;
+    }
+    @include responsive(xs) {
+        font-size: 25px;
+    }
+    @include responsive(vxxs) {
+        font-size: 23px;
+    }
+}
+
+.top-inner-contents {}
+
+.dashboard-flex-contetns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    @include responsive(allPhone) {
+        gap: 24px;
+        justify-content: center;
+        display: block;
+        text-align: center;
+    }
+    .rating-wrap {
+        @include responsive(allPhone) {
+            justify-content: center;
+        }
+    }
+    .dashboard-left-flex {}
+    .dashboard-right-flex {
+        .author-flex-contents {
+            display: flex;
+            align-items: center;
+            gap: 10px 20px;
+            @include responsive(allPhone) {
+                justify-content: center;
+                margin-top: 24px;
+            }
+            .author-icon {}
+        }
+    }
+}
+
+.author-thumb-contents {
+    position: relative;
+    z-index: 3;
+    transition: all .3s;
+    &:hover {
+        .author-account-list {
+            visibility: visible;
+            opacity: 1;
+            top: 100%;
+            background: $white;
+        }
+    }
+    .author-thumb {
+        max-height: 80px;
+        max-width: 80px;
+        @include responsive(xs) {
+            max-height: 60px;
+            max-width: 60px;
+        }
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .author-account-list {
+        position: absolute;
+        top: 130%;
+        right: 0;
+        background: $white;
+        z-index: 9998;
+        box-shadow: 0 0 10px rgba(#ddd, .2);
+        width: 120px;
+        background: $white;
+        visibility: hidden;
+        opacity: 1;
+        transition: all .2s;
+        display: block !important;
+        margin-left: 0 !important;
+        .list {
+            margin: 0 !important;
+            display: block !important;
+            a {
+                display: block;
+                font-size: 15px;
+                font-weight: 400;
+                padding: 10px 20px;
+                color: var(--heading-color);
+                border-bottom: 1px solid rgba(#ddd, .7);
+                transition: all .3s;
+                &:hover {
+                    background: var(--customer-profile);
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.single-icon-flex {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .single-icon {
+        font-size: 20px;
+        color: var(--heading-color);
+        transition: all .3s;
+        position: relative;
+        &:hover {
+            color: #05cd99;
+        }
+    }
+}
+
+.badge-icon {
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    background: $black;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    font-size: 9px;
+}
+
+.notification-list-wrapper .nicescroll-rails {
+    background: none;
+}
+
+.notification-list-wrapper .nicescroll-cursors {
+    background-color: var(--customer-profile) !important;
+    width: 5px !important;
+}
+
+.dashboard-right-contents .nicescroll-rails {
+    background: none;
+}
+
+.dashboard-right-contents .nicescroll-cursors {
+    background-color: var(--customer-profile) !important;
+    width: 5px !important;
+}
+
+.notification-list-wrapper {
+    position: relative;
+}
+
+.notification-list-wrapper {
+    .notification-title {
+        border-bottom: 1px solid rgba($steam-color, .5);
+        padding: 0px 15px 10px;
+        transition: all .2s;
+    }
+    .all-notification {
+        font-size: 15px;
+        font-weight: 500;
+        color: #333;
+        padding: 20px 15px 0;
+        display: inline-block;
+    }
+}
+
+.notifications-parent {
+    position: relative;
+    transition: all .3s;
+    &:hover {
+        .notification-list-wrapper {
+            visibility: visible;
+            opacity: 1;
+            top: 100%;
+            background: $white;
+        }
+    }
+    .notification-list-wrapper {
+        position: absolute;
+        top: 130%;
+        right: 0;
+        background: $white;
+        z-index: 9998;
+        box-shadow: 0 0 10px rgba(#ddd, .2);
+        width: 250px;
+        background: $white;
+        padding: 20px 0;
+        visibility: hidden;
+        opacity: 1;
+        transition: all .2s;
+        display: block !important;
+        margin-left: 0 !important;
+    }
+    .notification-list {
+        max-height: 250px;
+        overflow-y: auto;
+        padding: 0 7px;
+        @include responsive(xxs) {
+            transform: translateX(50%);
+        }
+        .list {
+            display: block;
+            padding: 5px 15px;
+            color: var(--heading-color);
+            border-bottom: 1px solid rgba(#ddd, .7);
+            transition: all .2s;
+            &:hover {
+                background: var(--customer-profile);
+                color: $white;
+                .notification-list-flex {
+                    .notification-icon {
+                        background-color: $white;
+                        color: var(--heading-color);
+                    }
+                }
+            }
+            .notification-list-flex {
+                display: flex;
+                align-items: flex-start;
+                align-items: center;
+                gap: 15px;
+                .notification-author {
+                    height: 40px;
+                    width: 40px;
+                    img {
+                        object-fit: cover;
+                        border-radius: 50%;
+                    }
+                }
+                .notification-icon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 30px;
+                    width: 30px;
+                    font-size: 18px;
+                    background: var(--heading-color);
+                    color: $white;
+                    border-radius: 50%;
+                    transition: all .3s;
+                }
+                .notification-contents {
+                    flex: 1;
+                    .list-title {
+                        font-size: 15px;
+                        font-weight: 500;
+                        margin: 0;
+                        transition: all .2s;
+                    }
+                    .list-sub {
+                        font-size: 14px;
+                        font-weight: 400;
+                        margin-top: 2px;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.top-search-input {
+    max-width: 300px;
+    &.w-100 {
+        max-width: 100%;
+    }
+    @include responsive(allPhone) {
+        margin: 20px auto 0;
+    }
+    .top-input-form {
+        position: relative;
+        .form--control {
+            padding: 0 15px 0 50px;
+            border: 1px solid rgba(#ddd, .4);
+            transition: all .3s;
+            box-shadow: 0 0 10px rgba($black, .01);
+            &:focus {
+                box-shadow: 0 0 10px rgba(#05cd99, .1);
+                border-color: rgba(#05cd99, .3);
+            }
+        }
+        .search-btn {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            font-size: 20px;
+            color: #333;
+            background: none;
+            outline: none;
+            border: 0;
+        }
+    }
+}
+
+
+/* Dashboard Customer Profile view */
+
+.admin-customer-profile-view {}
+
+.admin-profile-flex-view {
+    display: flex;
+    align-items: stretch;
+    gap: 24px 12px;
+    @include responsive(xxl) {
+        flex-wrap: wrap;
+    }
+    @include responsive(xl) {
+        flex-wrap: wrap;
+    }
+    @include responsive(lg) {
+        flex-wrap: wrap;
+    }
+    @include responsive(allPhone) {
+        display: block;
+    }
+    .flex-view-item {
+        width: 100%;
+    }
+}
+
+.admin-customer-profile-info {}
+
+.author-thumbs.bg-image {
+    height: 210px;
+    width: 210px;
+}
+
+.admin-customer-author-flex {
+    display: flex;
+    gap: 24px 20px;
+    justify-content: space-between;
+    @include responsive(sm) {
+        flex-wrap: wrap;
+    }
+}
+
+.admin-view-customer-address {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 24px;
+    @include responsive(lg) {
+        display: block;
+    }
+    @include responsive(sm) {
+        display: block;
+    }
+    .single-admin-customer-details {
+        width: 100%;
+    }
+}
+
+
+/* Dashboard Vendor Preview Profile */
+
+.single-preview-photo {
+    &:not(:first-child) {
+        margin-top: 40px;
+    }
+}
+
+
+/* Dashboard Campaign */
+
+.campaign-photo {
+    height: 100px;
+    width: 230px;
+    margin: 0 auto;
+    border-radius: 10px;
+    @include responsive(xxl) {
+        height: 90px;
+        width: 170px;
+    }
+    @include responsive(xl) {
+        height: 80px;
+        width: 150px;
+    }
+    @include responsive(lg) {
+        height: 70px;
+        width: 100px;
+    }
+    @include responsive(allPhone) {
+        margin-left: auto;
+        margin-right: 0;
+        height: 80px;
+        width: 150px;
+    }
+    @include responsive(vxxs) {
+        height: 70px;
+        width: 120px;
+    }
+}
+
+.dashboard-campaign-single {
+    &.campaign-padding-30 {
+        padding: 30px;
+        @include responsive(xxs) {
+            padding: 20px;
+        }
+        @include responsive(vxxs) {
+            padding: 20px 15px;
+        }
+    }
+    .dashboard-flex-input {
+        @include responsive(xl) {
+            display: block;
+        }
+        @include responsive(lg) {
+            display: block;
+        }
+        @include responsive(allPhone) {
+            display: block;
+        }
+    }
+}
+
+.sidebar-campaign-list {
+    .list {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+        &.active {
+            a {
+                background: var(--customer-profile);
+                color: $white;
+                &::after {
+                    @include linefont;
+                    content: "\f105";
+                    position: absolute;
+                    right: 20px;
+                }
+            }
+        }
+        a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--heading-color);
+            background: var(--dashboard-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: block;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+    }
+}
+
+
+/* Dashboard withdraw Info */
+
+.dashboard-withdraw-info-wrapper {
+    padding: 6px 30px 30px;
+    @include responsive(vxxs) {
+        padding: 0px 20px 24px;
+    }
+}
+
+.single-admin-withdraw-info {
+    .contact-info-list {
+        .list {
+            @include responsive(xxs) {
+                font-size: 15px;
+            }
+            @include responsive(vxxs) {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.withdraw-single-padding {
+    padding: 30px;
+    @include responsive(vxxs) {
+        padding: 20px 15px;
+    }
+}
+
+.withdraw-info-bottom {}
+
+.withdraw-info-flex {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 0 24px;
+    @include responsive(xxs) {
+        flex-wrap: wrap;
+    }
+    .nice-select-two {
+        width: 100%;
+    }
+    .dashboard-btn-wrapper {
+        width: 100%;
+    }
+}
+
+.btn-withdraw-info {
+    height: 100%;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 400;
+    transition: all .3s;
+    &.dashboard-bg {
+        &:hover {
+            background: none;
+            color: var(--customer-profile);
+        }
+    }
+}
+
+
+/* Dashboard Promo */
+
+.orders-child {
+    &:nth-child(4n+2) {
+        .single-orders {
+            background: var(--main-color-one);
+        }
+    }
+}
+
+.orders-child {
+    &:nth-child(4n+3) {
+        .single-orders {
+            background: #C71F66;
+        }
+    }
+}
+
+.orders-child {
+    &:nth-child(4n+4) {
+        .single-orders {
+            background: #6560FF;
+        }
+    }
+}
+
+.single-orders {
+    background: var(--customer-profile);
+    padding: 35px 30px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    &.style-padding {
+        padding: 29px 25px;
+    }
+    @include responsive(xxl) {
+        padding: 20px 15px;
+    }
+    @include responsive(xl) {
+        padding: 20px 20px;
+    }
+    @include responsive(allPhone) {
+        padding: 25px 20px;
+    }
+    @include responsive(sm) {
+        padding: 20px 15px;
+    }
+    .orders-shapes {
+        position: absolute;
+        top: -50px;
+        right: -100px;
+        height: 200%;
+        width: 220px;
+        transform: rotate( 30deg);
+        background: rgba($white, .2);
+        z-index: -1;
+    }
+    .orders-flex-content {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex-wrap: wrap;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        @include responsive(xxl) {
+            gap: 10px;
+        }
+        @include responsive(xl) {
+            gap: 10px;
+        }
+        @include responsive(lg) {
+            gap: 10px;
+        }
+        @include responsive(allPhone) {
+            gap: 20px;
+        }
+        @include responsive(sm) {
+            gap: 10px;
+        }
+        .icon {
+            font-size: 50px;
+            color: $white;
+            @include responsive(xxl) {
+                font-size: 40px;
+            }
+            @include responsive(xl) {
+                font-size: 40px;
+                text-align: right;
+            }
+            @include responsive(allPhone) {
+                font-size: 40px;
+                text-align: right;
+            }
+        }
+        .contents {
+            .order-titles {
+                font-size: 36px;
+                font-weight: 500;
+                line-height: 55px;
+                color: $white;
+                margin: 0;
+                word-break: break-all;
+                @include responsive(xxl) {
+                    font-size: 34px;
+                }
+                @include responsive(allPhone) {
+                    font-size: 30px;
+                }
+                @include responsive(sm) {
+                    font-size: 28px;
+                }
+            }
+            .order-para {
+                font-size: 16px;
+                line-height: 26px;
+                color: $white;
+                @include responsive(sm) {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+
+/* Dashboard Contact Info */
+
+.single-contact-dashboard {
+    border-radius: 20px;
+    &.contact-padding {
+        padding: 30px;
+        @include responsive(xl) {
+            padding: 20px 20px;
+        }
+        @include responsive(xxs) {
+            padding: 20px;
+        }
+        @include responsive(vxxs) {
+            padding: 20px 10px;
+        }
+    }
+}
+
+.contact-flex-contents {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    @include responsive(lg) {
+        display: block;
+    }
+    @include responsive(xs) {
+        gap: 10px;
+        flex-direction: column-reverse;
+    }
+}
+
+.contact-left-content {
+    .contact-title {
+        font-size: 18px;
+    }
+}
+
+.contact-right-contents {
+    .edit-profile {
+        background: var(--customer-profile);
+        color: $white;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 8px 15px;
+        border-radius: 5px;
+        @include responsive(lg) {
+            margin-top: 18px;
+            justify-content: center;
+        }
+    }
+}
+
+.contact-info-list {
+    &.style-02 {
+        .list {
+            display: inline-block;
+            width: 100%;
+            &:not(:last-child) {
+                margin-bottom: 40px;
+            }
+            .span-title {
+                width: 150px;
+                line-height: 28px;
+                @include responsive(vxxs) {
+                    width: 120px;
+                }
+            }
+            .title {
+                margin-top: 0;
+                display: inline-block;
+                line-height: 28px;
+            }
+        }
+    }
+    .list {
+        display: block;
+        font-size: 16px;
+        line-height: 26px;
+        @include responsive(xl) {
+            font-size: 15px;
+        }
+        @include responsive(md) {
+            font-size: 15px;
+        }
+        &:not(:last-child) {
+            margin-bottom: 24px;
+            @include responsive(xl) {
+                margin-bottom: 17px;
+            }
+        }
+        .span-title {}
+        .title {
+            margin-top: 10px;
+            display: block;
+        }
+    }
+}
+
+.contact-billing-address {
+    .single-billing-address {
+        border-radius: 20px;
+        padding: 30px;
+        @include responsive(xl) {
+            padding: 20px 20px;
+        }
+        @include responsive(xxs) {
+            padding: 20px;
+        }
+        @include responsive(vxxs) {
+            padding: 20px 10px;
+        }
+        &:not(:last-child) {
+            margin-bottom: 26px;
+        }
+    }
+}
+
+.dashboard-flex-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    @include responsive(xs) {
+        display: block;
+    }
+    .dashboard-input {
+        width: 100%;
+    }
+}
+
+.dashboard-input {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    .bootstrap-tagsinput {
+        width: 100%;
+        height: 55px;
+        padding: 9px 15px;
+        border: 1px solid rgba(#ddd, .4);
+        box-shadow: 0 0 10px rgba(#fff, .1);
+        overflow-y: auto;
+        &:focus {
+            box-shadow: 0 0 10px rgba(#05cd99, .1);
+            border-color: rgba(#05cd99, .3);
+        }
+        input {}
+        .tag {
+            background: var(--extra-light-color);
+            padding: 2px 5px;
+            margin: 2px 0;
+            line-height: 26px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    }
+    .tags_input {
+        width: 100%;
+    }
+    .form--control {
+        width: 100%;
+        height: 55px;
+        border: 1px solid rgba(#ddd, .4);
+        box-shadow: 0 0 10px rgba(#fff, .1);
+        font-size: 15px;
+        padding: 0 15px;
+        @include responsive(vxxs) {
+            font-size: 14px;
+        }
+        &:focus {
+            box-shadow: 0 0 10px rgba(#05cd99, .1);
+            border-color: rgba(#05cd99, .3);
+        }
+    }
+    .form--message {
+        padding: 15px;
+    }
+}
+
+.dashboard-label {
+    font-size: 15px;
+    font-weight: 500;
+    color: #666;
+    @include responsive(vxxs) {
+        font-size: 14px;
+    }
+}
+
+.toggle-password {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.hide-icon {
+    display: none;
+}
+
+.toggle-password.show-pass .hide-icon {
+    display: block;
+}
+
+.toggle-password.show-pass .show-icon {
+    display: none;
+}
+
+
+/* Dashboard Recent Orders */
+
+.dashboard-recent-order {}
+
+.recent-order-wrapper {
+    border-radius: 20px;
+    padding: 30px;
+    @include responsive(xl) {
+        padding: 20px;
+    }
+    @include responsive(lg) {
+        padding: 20px;
+    }
+    @include responsive(md) {
+        padding: 30px 150px;
+    }
+    @include responsive(xxs) {
+        padding: 20px;
+    }
+    @include responsive(vxxs) {
+        padding: 20px 10px;
+    }
+}
+
+.action-icon {
+    .icon {
+        color: var(--customer-profile);
+        &:nth-child(3n+2) {
+            color: var(--main-color-two);
+        }
+        &:nth-child(3n+3) {
+            color: var(--main-color-one);
+        }
+    }
+}
+
+.dashboard-table {
+    thead {
+        tr {
+            border-bottom: 1px solid rgba(#ddd, .4);
+            th {
+                color: var(--heading-color);
+                font-size: 16px;
+                font-weight: 500;
+                text-align: center;
+                padding: 0 0 15px;
+                &:first-child {
+                    text-align: left;
+                }
+                @include responsive(xxl) {
+                    font-size: 15px;
+                }
+                @include responsive(xl) {
+                    font-size: 14px;
+                }
+                @include responsive(lg) {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    tbody {
+        overflow: unset;
+        tr {
+            border-bottom: 1px solid rgba(#ddd, .4);
+            td {
+                text-align: center;
+                font-size: 16px;
+                @include responsive(xxl) {
+                    font-size: 15px;
+                }
+                @include responsive(xl) {
+                    font-size: 14px;
+                }
+                @include responsive(lg) {
+                    font-size: 14px;
+                }
+                &:first-child {
+                    text-align: left;
+                }
+                .logo-brand {
+                    max-height: 55px;
+                    img {
+                        border-radius: 5px;
+                    }
+                }
+                .btn-status {
+                    background: #F9503E;
+                    color: $white;
+                    font-size: 16px;
+                    padding: 8px 15px;
+                    border-radius: 5px;
+                }
+                .action-icon {
+                    margin: 5px 10px;
+                    .icon {
+                        font-size: 20px;
+                        transition: all .3s;
+                        &:hover {
+                            color: var(--customer-profile);
+                        }
+                        @include responsive(xl) {
+                            font-size: 18px;
+                        }
+                        @include responsive(lg) {
+                            font-size: 16px;
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.dashboard-table .custom--table {
+    @include responsive(lg) {
+        overflow-x: scroll;
+    }
+}
+
+.row-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    width: 20px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all .3s;
+    @include responsive(xxl) {
+        height: 18px;
+        width: 18px;
+        font-size: 12px;
+    }
+    @include responsive(xl) {
+        height: 17px;
+        width: 17px;
+        font-size: 12px;
+    }
+    @include responsive(lg) {
+        height: 15px;
+        width: 15px;
+        font-size: 10px;
+    }
+    @include responsive(allPhone) {
+        margin-left: auto;
+    }
+    &.checked {
+        background: #05cd99;
+        color: $white;
+        border-color: transparent;
+        &::before {
+            content: "\f00c";
+            @include linefont;
+        }
+    }
+}
+
+.res-row-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    width: 20px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all .3s;
+    @include responsive(xxl) {
+        height: 18px;
+        width: 18px;
+        font-size: 12px;
+    }
+    @include responsive(xl) {
+        height: 17px;
+        width: 17px;
+        font-size: 12px;
+    }
+    @include responsive(lg) {
+        height: 15px;
+        width: 15px;
+        font-size: 10px;
+    }
+    @include responsive(allPhone) {
+        margin-left: auto;
+    }
+    &.checked {
+        background: #05cd99;
+        color: $white;
+        border-color: transparent;
+        &::before {
+            content: "\f00c";
+            @include linefont;
+        }
+    }
+}
+
+.payment {
+    font-size: 15px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    background: rgba(#ddd, .1);
+    color: #333;
+    transition: all .3s;
+    @include responsive(xxl) {
+        padding: 5px 15px;
+        font-size: 14px;
+    }
+    @include responsive(xl) {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+    @include responsive(lg) {
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+    &:hover {
+        background: #333;
+        color: $white;
+    }
+    &.paid {
+        background: rgba(#05cd99, .1);
+        color: #05cd99;
+        &:hover {
+            background: #05cd99;
+            color: $white;
+        }
+    }
+    &.due {
+        background: rgba(#F9503E, .3);
+        color: #F9503E;
+        &:hover {
+            background: #F9503E;
+            color: $white;
+        }
+    }
+}
+
+.add-dropdown-text {
+    position: relative;
+    z-index: 1;
+    color: $white;
+    outline: none;
+    box-shadow: none;
+    font-size: 15px;
+    padding: 7px 10px;
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+    @include responsive(xxl) {
+        font-size: 14px;
+        padding: 5px 8px;
+    }
+    @include responsive(xl) {
+        font-size: 14px;
+        padding: 5px 7px;
+    }
+    @include responsive(lg) {
+        font-size: 13px;
+        padding: 5px 5px;
+    }
+}
+
+[value=Active].add-dropdown-text {
+    background: #05cd99;
+    border: 2px solid #05cd99;
+    &:hover {
+        background: none;
+        color: #05cd99;
+    }
+}
+
+[value=Inactive].add-dropdown-text {
+    background: #F9503E;
+    border: 2px solid #F9503E;
+    &:hover {
+        background: none;
+        color: #F9503E;
+    }
+}
+
+[value=Pending].add-dropdown-text {
+    background: #FABE50;
+    border: 2px solid #FABE50;
+    &:hover {
+        background: none;
+        color: #FABE50;
+    }
+}
+
+[value=Completed].add-dropdown-text {
+    background: #05cd99;
+    border: 2px solid #05cd99;
+    &:hover {
+        background: none;
+        color: #05cd99;
+    }
+}
+
+[value=Canceled].add-dropdown-text {
+    background: #F9503E;
+    border: 2px solid #F9503E;
+    &:hover {
+        background: none;
+        color: #F9503E;
+    }
+}
+
+.status-dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dashboard-table [data-label] {
+    position: relative;
+}
+
+.dashboard-table [data-label]::before {
+    position: absolute;
+    content: attr(data-label);
+    font-weight: 700;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 10px;
+    padding: 8px 20px;
+    display: none;
+    font-size: 14px;
+}
+
+@media (max-width: 991px) {
+    .dashboard-table .table-responsive thead {
+        display: none;
+    }
+    .dashboard-table .table-responsive [data-label]::before {
+        display: block;
+    }
+    .dashboard-table .table-responsive tr td {
+        display: block;
+        text-align: right !important;
+        padding-right: 5px;
+        &:last-child {
+            border-bottom: 1px solid rgba(#ddd, .4);
+            padding-bottom: 10px;
+        }
+    }
+    .dashboard-table .table-responsive tr td .logo-brand {
+        text-align: right;
+    }
+    .dashboard-table .table-responsive [data-label]::before {
+        padding: 8px 10px 8px 5px;
+    }
+}
+
+
+/* Dashboard Profile Photo */
+
+.profile-photo-upload {}
+
+.profile-photo-change {
+    border-radius: 10px;
+    .photo-upload {
+        display: inline-block;
+        padding: 10px 30px 25px;
+        text-align: center;
+        width: 100%;
+        border: 2px dashed #ddd;
+        border-radius: 10px;
+        @include responsive(xl) {
+            padding: 5px 15px 15px;
+        }
+        @include responsive(lg) {
+            padding: 5px 20px 15px;
+        }
+        @include responsive(xxs) {
+            padding: 10px 15px 20px;
+        }
+        .upload-icon {
+            font-size: 50px;
+            @include responsive(xl) {
+                font-size: 35px;
+            }
+            @include responsive(lg) {
+                font-size: 35px;
+            }
+            @include responsive(allPhone) {
+                font-size: 40px;
+            }
+            @include responsive(xxs) {
+                font-size: 30px;
+            }
+        }
+        .upload-para {
+            font-size: 15px;
+        }
+    }
+}
+
+.upload-finish {
+    position: relative;
+    z-index: 1;
+    .upload-thumb {
+        max-width: 120px;
+        max-height: 120px;
+        position: relative;
+        border-radius: 5px;
+        overflow: hidden;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        .close-thumb {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 18px;
+            width: 18px;
+            border-radius: 50%;
+            background: #ddd;
+            color: #333;
+            cursor: pointer;
+            transition: all .2s;
+            &:hover {
+                background: #05cd99;
+                color: $white;
+            }
+        }
+    }
+    .photo-name {
+        font-size: 14px;
+        font-weight: 500;
+        color: #333;
+    }
+    .photo-size {
+        display: block;
+        font-size: 12px;
+    }
+}
+
+.dashboard-btn-wrapper {
+    .btn-submit {
+        font-size: 18px;
+        font-weight: 500;
+        padding: 16px 35px;
+        display: inline-block;
+        text-align: center;
+        transition: all .3s;
+        @include responsive(allPhone) {
+            font-size: 16px;
+            padding: 12px 25px;
+        }
+        @include responsive(xxs) {
+            font-size: 16px;
+            padding: 12px 20px;
+        }
+        @include responsive(vxxs) {
+            font-size: 15px;
+            padding: 10px 15px;
+        }
+        &.dashboard-bg {
+            background: #05cd99;
+            color: $white;
+            border: 2px solid #05cd99;
+            &:hover {
+                background: none;
+                color: #05cd99;
+            }
+        }
+        &.btn-medium {
+            font-size: 16px;
+            padding: 10px 25px;
+        }
+    }
+}
+
+
+/* Dashboard Wallet */
+
+.wallet-child {
+    &:nth-child(1) {
+        .single-wallet {
+            background: var(--customer-profile);
+            padding: 25px 25px;
+            border-radius: 10px;
+            position: relative;
+            z-index: 2;
+            overflow: hidden;
+            @include responsive(xxl) {
+                padding: 20px 15px;
+            }
+            @include responsive(xl) {
+                padding: 20px 20px;
+            }
+            @include responsive(allPhone) {
+                padding: 25px 20px;
+            }
+            @include responsive(sm) {
+                padding: 20px 15px;
+            }
+            .wallet-shapes {
+                position: absolute;
+                top: -50px;
+                right: -100px;
+                height: 200%;
+                width: 220px;
+                transform: rotate( 30deg);
+                background: rgba($white, .2);
+                z-index: -1;
+            }
+            .wallet-flex-content {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: row-reverse;
+                gap: 20px;
+                @include responsive(xxl) {
+                    gap: 10px;
+                }
+                @include responsive(xl) {
+                    gap: 10px;
+                }
+                @include responsive(lg) {
+                    gap: 10px;
+                }
+                @include responsive(allPhone) {
+                    gap: 20px;
+                }
+                @include responsive(sm) {
+                    gap: 10px;
+                }
+                .icon {
+                    font-size: 50px;
+                    color: $white;
+                    height: unset;
+                    width: unset;
+                    border-radius: 10px;
+                    @include responsive(xxl) {
+                        font-size: 40px;
+                    }
+                    @include responsive(xl) {
+                        font-size: 40px;
+                        text-align: right;
+                    }
+                    @include responsive(allPhone) {
+                        font-size: 40px;
+                        text-align: right;
+                    }
+                }
+                .wallet-contents {
+                    .wallet-titles {
+                        font-size: 36px;
+                        font-weight: 500;
+                        line-height: 55px;
+                        color: $white;
+                        margin: 0;
+                        @include responsive(xxl) {
+                            font-size: 34px;
+                        }
+                        @include responsive(allPhone) {
+                            font-size: 30px;
+                        }
+                        @include responsive(sm) {
+                            font-size: 28px;
+                        }
+                    }
+                    .wallet-para {
+                        font-size: 16px;
+                        line-height: 26px;
+                        color: $white;
+                        @include responsive(sm) {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.add-money {
+    position: relative;
+    z-index: 3;
+    .icon {
+        cursor: pointer;
+    }
+    .add-money-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $white;
+        padding: 50px 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(#0088DD, .1);
+        transform: scale(.5);
+        visibility: hidden;
+        opacity: 0;
+        transition: all .3s;
+        border: 1px solid var(--customer-profile);
+        overflow: hidden;
+        width: 400px;
+        @include responsive(xl) {
+            left: auto;
+            right: 0;
+        }
+        @include responsive(lg) {
+            left: auto;
+            right: 0;
+        }
+        @include responsive(allPhone) {
+            left: auto;
+            right: 0;
+            padding: 40px 20px;
+        }
+        @include responsive(xxs) {
+            width: 320px;
+        }
+        @include responsive(vxxs) {
+            width: 280px;
+            padding: 30px 10px;
+        }
+        .add-money-close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 35px;
+            width: 35px;
+            background: var(--customer-profile);
+            color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    }
+    &.add-wallet {
+        .add-money-wrapper {
+            visibility: visible;
+            opacity: 1;
+            transform: scale(1);
+            top: -100%;
+        }
+    }
+}
+
+.dashboard-checkbox {
+    &.on-track-checkbox {
+        gap: 5px;
+        .check-input {
+            border-radius: 50%;
+            &:checked+.checkbox-label {
+                color: var(--customer-profile);
+                font-weight: 500;
+            }
+        }
+    }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    cursor: pointer;
+    gap: 10px;
+    .check-input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        min-height: 18px;
+        min-width: 18px;
+        cursor: pointer;
+        background: $white;
+        border: 1px solid #dddddd;
+        border-radius: 0px;
+        margin-top: 3px;
+        -webkit-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+        &::after {
+            content: "\f00c";
+            font-family: 'Line Awesome Free';
+            font-weight: 900;
+            font-size: 10px;
+            color: $white;
+            visibility: hidden;
+            opacity: 0;
+            -webkit-transform: scale(1.6) rotate(90deg);
+            -ms-transform: scale(1.6) rotate(90deg);
+            transform: scale(1.6) rotate(90deg);
+            -webkit-transition: all .2s;
+            -o-transition: all .2s;
+            transition: all .2s;
+        }
+        &:checked {
+            background: var(--customer-profile);
+            border-color: var(--customer-profile);
+            background: var(--customer-profile);
+            &::after {
+                visibility: visible;
+                opacity: 1;
+                -webkit-transform: scale(1.2) rotate(0deg);
+                -ms-transform: scale(1.2) rotate(0deg);
+                transform: scale(1.2) rotate(0deg);
+            }
+        }
+    }
+    .checkbox-label {
+        cursor: pointer;
+        text-align: left;
+        line-height: 26px;
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--heading-color);
+        margin: 0;
+        transition: all .3s;
+        @include responsive(xs) {
+            font-size: 15px;
+        }
+    }
+}
+
+.add-money-cards {
+    .payment-card {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        .single-card {
+            background: $white;
+            padding: 5px 10px;
+            position: relative;
+            z-index: 2;
+            margin-bottom: 10px;
+            border: 2px solid transparent;
+            transition: all .3s;
+            &.active {
+                border-color: var(--customer-profile);
+                &::before {
+                    content: "\f00c";
+                    @include linefont;
+                    background: var(--customer-profile);
+                    color: $white;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                    height: 16px;
+                    width: 16px;
+                    font-size: 10px;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: -7px;
+                    right: -7px;
+                    z-index: 9;
+                    transition: all .3s;
+                }
+            }
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+.single-wallet {
+    padding: 25px 25px;
+    background: $white;
+    border-radius: 20px;
+    @include responsive(xxxl) {
+        padding: 35px 25px;
+    }
+    @include responsive(xxl) {
+        padding: 34px 25px;
+    }
+}
+
+.wallet-flex-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    @include responsive(xxxl) {
+        gap: 10px;
+    }
+    @include responsive(xxl) {
+        gap: 10px;
+    }
+    @include responsive(vxxs) {
+        gap: 15px;
+    }
+    .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 75px;
+        width: 75px;
+        color: var(--customer-profile);
+        background: rgba(var(--customer-profile-rgb), .1);
+        font-size: 50px;
+        @include responsive(xxxl) {
+            height: 55px;
+            width: 55px;
+            font-size: 40px;
+        }
+        @include responsive(xxl) {
+            height: 50px;
+            width: 50px;
+            font-size: 36px;
+        }
+    }
+    .wallet-contents {
+        flex: 1;
+        .wallet-titles {
+            font-size: 24px;
+            line-height: 30px;
+            @include responsive(xxl) {
+                font-size: 20px;
+                line-height: 26px;
+            }
+        }
+    }
+}
+
+.wallet-card-wrapper {
+    @include responsive(xl) {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0 24px;
+    }
+    @include responsive(lg) {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0 24px;
+    }
+    @include responsive(allPhone) {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0 24px;
+    }
+}
+
+.wallet-card {
+    img {}
+}
+
+.single-card-info {
+    padding: 30px;
+    border-radius: 20px;
+    @include responsive(xl) {
+        flex: 1;
+        min-width: 250px;
+    }
+    @include responsive(lg) {
+        flex: 1;
+        min-width: 250px;
+    }
+    @include responsive(allPhone) {
+        flex: 1;
+        min-width: 250px;
+    }
+}
+
+
+/* Dashboard Reward Point */
+
+.redeem-reward-point-wrapper {
+    padding: 20px 30px;
+    border-radius: 20px;
+    @include responsive(vxxs) {
+        padding: 20px 10px;
+    }
+}
+
+.reward-point-title {
+    font-size: 20px;
+    line-height: 30px;
+    .max-redeem {
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
+
+.redeem-flex-contents {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    @include responsive(xxl) {
+        display: block;
+    }
+    @include responsive(xs) {
+        display: block;
+    }
+    @include responsive(sm) {
+        display: block;
+    }
+    .redeem-button-wrapper {
+        @include responsive(xxl) {
+            margin-top: 20px;
+        }
+        @include responsive(sm) {
+            margin-top: 20px;
+        }
+        @include responsive(xs) {
+            margin-top: 20px;
+        }
+    }
+}
+
+.redeem-form {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 24px;
+    flex-wrap: wrap;
+    @include responsive(xxs) {
+        display: block;
+    }
+    .redeem-control {
+        @include responsive(allPhone) {
+            flex-basis: 60%;
+        }
+    }
+    .form--control {
+        height: 54px;
+        border: 1px solid rgba(#ddd, .4);
+        background: none;
+        box-shadow: 0 0 10px rgba($white, .2);
+        transition: all .3s;
+        width: 100%;
+        padding: 0 15px;
+        &:focus {
+            box-shadow: 0 0 10px rgba(#05cd99, .1);
+            border-color: rgba(#05cd99, .4);
+        }
+    }
+}
+
+.redeem-button-wrapper {
+    .btn-redeem {
+        background: var(--customer-profile);
+        color: $white;
+        font-size: 15px;
+        padding: 16px 20px;
+        border-radius: 5px;
+        display: inline-block;
+    }
+}
+
+.earn-money {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex: 1;
+    @include responsive(xxs) {
+        margin-top: 10px;
+    }
+    .equal-sign {
+        font-size: 24px;
+        color: #333;
+    }
+    .money {
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--main-color-three);
+        word-break: break-all;
+    }
+}
+
+.redeem-promo {
+    padding: 0 24px 24px;
+    border-radius: 20px;
+    @include responsive(vxxs) {
+        padding: 0 10px 24px;
+    }
+}
+
+.reward-child {
+    &:nth-child(3n+2) {
+        .single-reward {
+            background: rgba(var(--main-color-three-rgb), .1);
+            .reward-contents {
+                .reward-titles {
+                    color: var(--main-color-three);
+                }
+                .reward-btn {
+                    background: var(--main-color-three);
+                    &:hover {
+                        color: var(--main-color-three);
+                        border-color: var(--main-color-three);
+                    }
+                }
+            }
+            .reward-lock-icon {
+                .lockunlock {
+                    background: var(--main-color-three);
+                }
+            }
+        }
+    }
+}
+
+.reward-child {
+    &:nth-child(3n+3) {
+        .single-reward {
+            background: rgba(#0088DD, .1);
+            .reward-contents {
+                .reward-titles {
+                    color: #0088DD;
+                }
+                .reward-btn {
+                    background: #0088DD;
+                    &:hover {
+                        color: #0088DD;
+                        border-color: #0088DD;
+                    }
+                }
+            }
+            .reward-lock-icon {
+                .lockunlock {
+                    background: #0088DD;
+                }
+            }
+        }
+    }
+}
+
+.single-reward {
+    background: rgba(var(--customer-profile-rgb), .1);
+    padding: 35px 30px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    @include responsive(xxxl) {
+        padding: 35px 16px;
+    }
+    @include responsive(xxl) {
+        padding: 20px 15px;
+    }
+    @include responsive(xl) {
+        padding: 20px 20px;
+    }
+    @include responsive(lg) {
+        padding: 30px 20px;
+    }
+    @include responsive(allPhone) {
+        padding: 25px 20px;
+    }
+    @include responsive(sm) {
+        padding: 20px 15px;
+    }
+    &.disabled {
+        .reward-contents {
+            .reward-btn {
+                background: #E9EDF7 !important;
+                color: #999 !important;
+                &:hover {
+                    background: #E9EDF7 !important;
+                    border-color: #E9EDF7 !important;
+                }
+            }
+        }
+        .reward-lock-icon {
+            .unlock {
+                visibility: hidden;
+                opacity: 0;
+            }
+            .lock {
+                visibility: visible;
+                opacity: 1;
+            }
+            .lockunlock {
+                background: #E9EDF7 !important;
+                color: #999;
+            }
+        }
+    }
+    .reward-lock-icon {
+        .lockunlock {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 20px;
+            background: var(--customer-profile);
+            color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 35px;
+            width: 35px;
+            border-radius: 0 10px 0 10px;
+        }
+        .lock {
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+    .reward-flex-content {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 20px;
+        @include responsive(xxxl) {
+            gap: 10px;
+        }
+        @include responsive(xxl) {
+            gap: 10px;
+            display: block;
+        }
+        @include responsive(xl) {
+            gap: 20px;
+        }
+        @include responsive(lg) {
+            gap: 10px;
+        }
+        @include responsive(allPhone) {
+            gap: 20px;
+        }
+        @include responsive(sm) {
+            gap: 10px;
+        }
+        @include responsive(vxxs) {
+            display: block;
+        }
+        .icon-img {
+            @include responsive(xxl) {
+                margin-bottom: 10px;
+            }
+            @include responsive(vxxs) {
+                margin-bottom: 10px;
+            }
+        }
+        .reward-contents {
+            flex: 1;
+            .reward-titles {
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 36px;
+                color: $white;
+                margin: 0;
+                color: var(--customer-profile);
+                @include responsive(allPhone) {
+                    font-size: 22px;
+                }
+                @include responsive(sm) {
+                    font-size: 20px;
+                }
+            }
+            .reward-para {
+                font-size: 16px;
+                line-height: 26px;
+                color: #666;
+                @include responsive(sm) {
+                    font-size: 15px;
+                    display: block;
+                }
+            }
+            .reward-btn {
+                background: var(--customer-profile);
+                color: $white;
+                font-size: 15px;
+                padding: 5px 20px;
+                border: 2px solid transparent;
+                border-radius: 5px;
+                display: inline-block;
+                transition: all .3s;
+                &:hover {
+                    background: none;
+                    color: var(--customer-profile);
+                    border-color: var(--customer-profile);
+                }
+            }
+        }
+    }
+}
+
+.recent-reward-wrapper {
+    padding: 30px;
+    border-radius: 20px;
+    @include responsive(vxxs) {
+        padding: 20px 10px;
+    }
+    .dashboard-common-title {
+        font-size: 20px;
+        @include responsive(allPhone) {
+            font-size: 18px;
+        }
+    }
+}
+
+.reward-point-list {
+    .list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 10px;
+        padding-top: 18px;
+        border-top: 1px solid rgba(#ddd, .4);
+        &:not(:last-child) {
+            padding-bottom: 18px;
+        }
+        .date-list {
+            .reward-point {
+                color: var(--heading-color);
+            }
+            .point-date {
+                font-size: 12px;
+                display: block;
+                margin-top: 6px;
+            }
+        }
+        .main-points {
+            font-weight: 500;
+            color: var(--heading-color);
+        }
+    }
+}
+
+
+/* Dashboard Order Status */
+
+.order-status-area {
+    padding: 50px 40px;
+    border-radius: 20px;
+    @include responsive(allPhone) {
+        padding: 40px 40px;
+    }
+    @include responsive(xxs) {
+        padding: 30px 20px;
+    }
+    @include responsive(vxxs) {
+        padding: 20px 20px;
+    }
+}
+
+.order-top-flex-contents {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.order-status-left {}
+
+.status-delivery-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    @include responsive(xl) {
+        gap: 10px;
+    }
+    @include responsive(allPhone) {
+        gap: 10px;
+    }
+    .status-date {
+        font-size: 15px;
+    }
+    .creation-date {}
+    .expected-date {}
+}
+
+.order-status-right {
+    .vendor-name {
+        font-size: 16px;
+        line-height: 28px;
+        .names {
+            color: var(--customer-profile);
+            margin-left: 5px;
+        }
+    }
+}
+
+.order-step-area {
+    padding: 0 100px;
+    @include responsive(xxxl) {
+        padding: 0 50px;
+    }
+    @include responsive(xxl) {
+        padding: 0;
+    }
+    @include responsive(xl) {
+        padding: 0;
+    }
+    @include responsive(lg) {
+        padding: 0;
+    }
+    @include responsive(allPhone) {
+        padding: 0;
+    }
+}
+
+.order-step-inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.single-step {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    width: calc((100% / 5) - 0px);
+    @include responsive(xl) {
+        width: calc((100% / 4) - 0px);
+    }
+    @include responsive(lg) {
+        width: calc((100% / 3) - 0px);
+    }
+    @include responsive(allPhone) {
+        width: calc((100% / 3) - 0px);
+    }
+    @include responsive(xs) {
+        width: calc((100% / 2) - 0px);
+    }
+    @include responsive(vxxs) {
+        width: calc((100% / 1) - 0px);
+    }
+    &.order-complete {
+        &::before,
+        &::after {
+            background: var(--customer-profile);
+        }
+        .step-number {
+            background: var(--customer-profile);
+            color: $white;
+            border-color: var(--customer-profile);
+            .num {
+                display: none;
+            }
+            .icon {
+                display: block;
+                font-size: 20px;
+            }
+        }
+    }
+    &:first-child {
+        &::before {
+            display: none;
+            @include responsive(vxxs) {
+                display: block;
+            }
+        }
+    }
+    &:last-child {
+        &::after {
+            display: none;
+            @include responsive(vxxs) {
+                display: block;
+            }
+        }
+    }
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 50%;
+        top: 20px;
+        left: 0;
+        background: #ddd;
+        z-index: -1;
+    }
+    &::after {
+        left: auto;
+        right: 0;
+    }
+    .step-number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        width: 40px;
+        border: 1px dashed #666;
+        background: $white;
+        border-radius: 50%;
+        margin: 0 auto 15px;
+        .icon {
+            display: none;
+        }
+    }
+    .step-title {
+        font-size: 16px;
+        @include responsive(allPhone) {
+            font-size: 15px;
+        }
+    }
+}
+
+.order-status-bottom-area {}
+
+.status-bottom-flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+    @include responsive(xxl) {
+        gap: 30px;
+    }
+    @include responsive(xl) {
+        gap: 30px;
+    }
+    @include responsive(lg) {
+        gap: 20px;
+    }
+    @include responsive(allPhone) {
+        gap: 20px;
+    }
+    .status-left-content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 24px 50px;
+        @include responsive(xxl) {
+            gap: 24px;
+        }
+        @include responsive(lg) {
+            gap: 24px 10px;
+        }
+        .single-left-contents {
+            max-width: 350px;
+            @include responsive (xxl) {
+                max-width: 300px;
+            }
+            @include responsive (xl) {
+                max-width: 300px;
+            }
+            @include responsive (lg) {
+                max-width: 300px;
+            }
+            .address-para {
+                line-height: 28px;
+                font-size: 16px;
+                @include responsive(xxl) {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+.status-total-count {}
+
+.count-list {
+    .list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px 50px;
+        @include responsive (xxl) {
+            gap: 10px 30px;
+        }
+        @include responsive (lg) {
+            gap: 10px 20px;
+        }
+        @include responsive (allPhone) {
+            gap: 10px 40px;
+        }
+        @include responsive (vxxs) {
+            gap: 10px 50px;
+        }
+        .left {
+            color: var(--light-color);
+        }
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+
+/* Data Table Style */
+
+.dataTables_wrapper .dataTables_length select {
+    border: 1px solid rgba(#ddd, .5);
+}
+
+.dataTables_wrapper .dataTables_filter input {
+    border: 1px solid rgba(#ddd, .5);
+}
+
+table.dataTable thead th,
+table.dataTable thead td {
+    border-bottom: 1px solid rgba(#ddd, .5);
+}
+
+table.dataTable thead tr th:first-child {
+    padding-left: 10px;
+}
+
+table.dataTable.no-footer {
+    border-bottom: 1px solid rgba(#ddd, .5);
+}
+
+.dataTables_wrapper .dataTables_info {
+    padding-top: 30px;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+    padding-top: 24px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    color: #fff !important;
+    border: 1px solid var(--customer-profile);
+    background: var(--customer-profile);
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    color: var(--customer-profile) !important;
+    background: none;
+    border-color: var(--customer-profile);
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    color: #fff !important;
+    border: 1px solid var(--customer-profile);
+    background: var(--customer-profile);
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.next,
+.dataTables_wrapper .dataTables_paginate .paginate_button.previous {
+    border: 1px solid var(--customer-profile);
+    color: var(--customer-profile) !important;
+    text-indent: -9999px;
+    display: inline-flex;
+    position: relative;
+    z-index: 1;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.next::after {
+    border-top: 2px solid #666;
+    border-right: 2px solid #666;
+    content: "";
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 50%;
+    transform: translateY(-50%) rotate( 45deg);
+    right: 12px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.previous::before {
+    border-bottom: 2px solid #666;
+    border-left: 2px solid #666;
+    content: "";
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 50%;
+    transform: translateY(-50%) rotate( 45deg);
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.next:hover,
+.dataTables_wrapper .dataTables_paginate .paginate_button.previous:hover {
+    border: 1px solid var(--customer-profile);
+    color: #333 !important;
+    background: none;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.previous.disabled::before {
+    border-color: rgba(#ddd, .5);
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.next.disabled::after {
+    border-color: rgba(#ddd, .5);
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.next.disabled,
+.dataTables_wrapper .dataTables_paginate .paginate_button.previous.disabled {
+    border-color: rgba(#ddd, .3);
+    color: #666 !important;
+}
+
+
+/* Dashboard Close */
+
+.dashboard-left-content {
+    @include responsive(allPhone) {
+        z-index: 1;
+        position: absolute;
+        left: -100%;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: all .5s;
+        -o-transition: all .5s;
+        transition: all .5s;
+        z-index: 99;
+        background: $white;
+        text-align: center;
+        border-radius: 10px;
+        display: block;
+        height: 100vh;
+        transition: all .5s;
+        &.active {
+            visibility: visible;
+            opacity: 1;
+            left: 0;
+        }
+        @include responsive(xxs) {
+            width: 280px;
+        }
+    }
+    .close-bars {
+        position: absolute;
+        right: 0px;
+        top: 0;
+        font-size: 24px;
+        color: $white;
+        background: var(--customer-profile);
+        -webkit-box-shadow: 0 0 10px rgba(#ddd, .5);
+        box-shadow: 0 0 10px rgba(#ddd, .5);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        height: 35px;
+        width: 35px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        text-align: center;
+        border-radius: 5px;
+        display: none;
+        @include responsive(allPhone) {
+            display: block;
+        }
+    }
+}
+
+.dashboard-icon {
+    display: none;
+    @include responsive(allPhone) {
+        display: block;
+    }
+    .sidebar-icon {
+        font-size: 28px;
+        cursor: pointer;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        height: 45px;
+        width: 45px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        background: var(--customer-profile);
+        -webkit-box-shadow: 0 0 10px rgba(#ddd, .5);
+        box-shadow: 0 0 10px rgba(#ddd, .5);
+        z-index: 95;
+        border-radius: 5px;
+        color: $white;
+    }
+}

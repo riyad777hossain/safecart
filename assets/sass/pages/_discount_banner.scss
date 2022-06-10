@@ -1,0 +1,80 @@
+/* Discount Banner */
+
+.discount-banner-area {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    padding-top: 35px;
+    @include responsive(allxl) {
+        padding-top: 60px;
+    }
+    @include responsive(xxl) {
+        padding-top: 50px;
+    }
+    @include responsive(lg) {
+        padding-top: 50px;
+    }
+    &.bg-item-two {
+        &::before {
+            position: absolute;
+            content: "";
+            height: 410px;
+            width: 410px;
+            border-radius: 50%;
+            background: #D9F0FF;
+            z-index: -1;
+            top: -130px;
+            left: -110px;
+        }
+    }
+}
+
+.discount-banner-contents {
+    @include responsive(allxl) {
+        margin-bottom: 47px;
+    }
+    @include responsive(xxl) {
+        margin-bottom: 20px;
+    }
+    @include responsive(lg) {
+        margin-bottom: 20px;
+    }
+    .percent-descount-title {
+        font-size: 36px;
+        font-weight: 400;
+        @include responsive(allPhone) {
+            font-size: 32px;
+        }
+        @include responsive(xs) {
+            font-size: 28px;
+        }
+        @include responsive(vxxs) {
+            font-size: 26px;
+        }
+        .percent-title {
+            display: block;
+            font-size: 65px;
+            line-height: 70px;
+            @include responsive(allPhone) {
+                font-size: 48px;
+                line-height: 55px;
+            }
+            @include responsive(xs) {
+                font-size: 40px;
+                line-height: 48px;
+            }
+            @include responsive(vxxs) {
+                font-size: 36px;
+                line-height: 42px;
+            }
+        }
+    }
+}
+
+.ad_thumb {
+    margin: 0 auto;
+    text-align: center;
+    img {
+        margin: 0 auto;
+    }
+}

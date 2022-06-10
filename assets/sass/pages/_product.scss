@@ -1,0 +1,122 @@
+/* Products Area */
+
+.product-area {}
+
+.single-products {
+    padding: 30px;
+    &.product-border {
+        border: 1px solid rgba($steam-color, .3);
+    }
+    &.hover-color-two {
+        .product-lists {
+            .list {
+                &:hover {
+                    a {
+                        color: var(--main-color-two) !important;
+                    }
+                }
+            }
+        }
+    }
+    &.hover-color-three {
+        .product-lists {
+            .list {
+                &:hover {
+                    a {
+                        color: var(--main-color-three) !important;
+                    }
+                }
+            }
+        }
+    }
+    &.hover-color-four {
+        .product-lists {
+            .list {
+                &:hover {
+                    a {
+                        color: var(--main-color-four) !important;
+                    }
+                }
+            }
+        }
+    }
+    .products-thumb {
+        margin-right: 30px;
+        height: 285px;
+        width: 230px;
+        @include responsive(lg) {
+            height: 240px;
+            width: 200px;
+            margin-right: 20px;
+        }
+        @include responsive(allPhone) {
+            height: 240px;
+            width: 200px;
+            margin-right: 20px;
+        }
+        @include responsive(xxs) {
+            margin: 0 auto 10px;
+        }
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .product-contents {
+        flex: 1;
+        .common-title-two {
+            line-height: 24px;
+        }
+        .product-lists {
+            .list {
+                display: block;
+                font-size: 16px;
+                color: var(--light-color);
+                line-height: 24px;
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                    @include responsive(lg) {
+                        margin-bottom: 5px;
+                    }
+                    @include responsive(allPhone) {
+                        margin-bottom: 5px;
+                    }
+                }
+                @include responsive(xxs) {
+                    font-size: 16px;
+                    line-height: 28px;
+                }
+                a {
+                    transition: all .3s;
+                }
+                &:hover {
+                    a {
+                        color: var(--main-color-one);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.product-flex-contents {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    @include responsive(xxs) {
+        display: block;
+        text-align: center;
+    }
+}
+
+.product-bundle-wrapper {
+    @include responsive(xl) {
+        max-height: 915px;
+        overflow-y: scroll;
+    }
+    @include responsive(lg) {
+        max-height: 778px;
+        overflow-y: scroll;
+    }
+}

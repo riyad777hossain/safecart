@@ -1,0 +1,584 @@
+/*---------------------------------------
+    21. Global Card Area
+---------------------------------------*/
+
+.global-card-item {
+    -webkit-box-shadow: 0 0 10px rgba($steam-color, .5);
+    box-shadow: 0 0 10px rgba($steam-color, .5);
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    &.center-text {
+        text-align: center;
+        .single-global-card {
+            justify-content: center;
+        }
+    }
+    &:hover {
+        -webkit-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+        transform: translateY(-5px);
+        .global-card-thumb {
+            img {
+                -webkit-transform: rotate(5deg) scale(1.2);
+                -ms-transform: rotate(5deg) scale(1.2);
+                transform: rotate(5deg) scale(1.2);
+            }
+            &.selling-thumb-overlay {
+                &::before {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+            .global-thumb-icons {
+                visibility: visible;
+                opacity: 1;
+                top: 20px;
+            }
+        }
+    }
+    &.style-02 {
+        &:hover {
+            .global-thumb-icons {
+                top: auto;
+                bottom: 20px;
+            }
+        }
+        .global-thumb-icons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: auto;
+            bottom: -100px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            .lists {
+                margin: 5px 5px;
+                .icon {
+                    height: 35px;
+                    width: 35px;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    &.style-03 {
+        box-shadow: none;
+        &:hover {
+            .global-thumb-icons {
+                transform: translate(-50%, -50%);
+                top: 50%;
+                left: 50%;
+            }
+        }
+        .global-thumb-icons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 50%;
+            left: 50%;
+            .lists {
+                margin: 5px 5px;
+                .icon {
+                    height: 35px;
+                    width: 35px;
+                    font-size: 20px;
+                    border-radius: 0;
+                }
+            }
+        }
+        .global-card-contents {
+            padding: 25px 0px 0px;
+        }
+    }
+    .global-card-thumb {
+        overflow: hidden;
+        position: relative;
+        z-index: 2;
+        img {
+            -webkit-transition: all .3s;
+            -o-transition: all .3s;
+            transition: all .3s;
+            width: 100%;
+            @include responsive(allPhone) {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.global-card-contents {
+    padding: 25px 20px 30px;
+    .discount-countdown {
+        margin: -15px 0 5px;
+    }
+}
+
+.thumb-top-contents {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 9;
+    display: block;
+    &.right-side {
+        left: auto;
+        right: 10px;
+    }
+    .percent-box {
+        display: block;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        padding: 5px 15px;
+        color: $white;
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.special-offer-small {
+    display: block;
+    img {
+        width: unset;
+    }
+}
+
+.global-thumb-icons {
+    display: block;
+    position: absolute;
+    top: -100px;
+    right: 20px;
+    z-index: 9;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .4s;
+    &.hover-color-two {
+        .lists {
+            .icon {
+                &:hover {
+                    background: var(--main-color-two);
+                    color: $white;
+                }
+            }
+        }
+    }
+    &.hover-color-three {
+        .lists {
+            .icon {
+                &:hover {
+                    background: var(--main-color-three);
+                    color: $white;
+                }
+            }
+        }
+    }
+    &.hover-color-four {
+        .lists {
+            .icon {
+                &:hover {
+                    background: var(--main-color-four);
+                    color: $white;
+                }
+            }
+        }
+    }
+    .lists {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+        .icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 48px;
+            width: 48px;
+            border-radius: 5px;
+            background: $white;
+            color: var(--light-color);
+            font-size: 24px;
+            box-shadow: 0 0 5px rgba($steam-color, .2);
+            transition: all .3s;
+            &:hover {
+                background: var(--main-color-one);
+                color: $white;
+            }
+        }
+    }
+}
+
+.card-reviews {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: var(--light-color);
+    &.color-one {
+        .ratings {
+            i {
+                color: var(--main-color-one);
+            }
+        }
+    }
+    &.color-two {
+        .ratings {
+            i {
+                color: var(--main-color-two);
+            }
+        }
+    }
+    &.color-three {
+        .ratings {
+            i {
+                color: var(--main-color-three) !important;
+            }
+        }
+    }
+    .ratings {
+        margin: 5px;
+        i {
+            color: var(--review-color);
+        }
+    }
+    .reviews {}
+}
+
+.single-global-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    @include responsive(vxxs) {
+        display: block;
+        margin-top: 0 !important;
+    }
+    .global-card-left {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-right: 20px;
+        padding-top: 10px;
+        @include responsive(vxxs) {
+            margin-right: 10px;
+        }
+        .price {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 36px;
+            margin-right: 20px;
+            &.color-1 {
+                color: var(--main-color-one);
+            }
+            &.color-2 {
+                color: var(--main-color-two);
+            }
+            &.color-3 {
+                color: var(--main-color-three);
+            }
+        }
+        .global-sale {}
+    }
+    .global-card-right {
+        padding-top: 10px;
+    }
+}
+
+.global-sale.sale-right-gap {
+    margin-right: 20px;
+    @include responsive(allPhone) {
+        margin-right: 10px;
+    }
+}
+
+.global-flex-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    .icon {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        background: $steam-color;
+        color: var(--heading-color);
+        height: 40px;
+        width: 40px;
+        font-size: 22px;
+        overflow: hidden;
+        -webkit-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+        &:hover {
+            background: var(--main-color-one);
+            color: $white;
+        }
+        &.secondary-outline-1 {
+            background: none;
+            border: 1px solid $secondary-color;
+            color: $secondary-color;
+            &:hover {
+                background: $secondary-color;
+                color: $white;
+            }
+            &.cart-loading {
+                &::before {
+                    background-color: $secondary-color;
+                }
+            }
+        }
+        &.outline-color-1 {
+            background: none;
+            border: 1px solid var(--main-color-one);
+            color: var(--main-color-one);
+            &:hover {
+                background: var(--main-color-one);
+                color: $white;
+            }
+            &.cart-loading {
+                &::before {
+                    background-color: var(--main-color-one);
+                }
+            }
+        }
+        &.outline-color-2 {
+            background: none;
+            border: 1px solid var(--main-color-two);
+            color: var(--main-color-two);
+            &:hover {
+                background: var(--main-color-two);
+                color: $white;
+            }
+            &.cart-loading {
+                &::before {
+                    background-color: var(--main-color-two);
+                }
+            }
+        }
+        &.outline-color-3 {
+            background: none;
+            border: 1px solid var(--main-color-three);
+            color: var(--main-color-three);
+            &:hover {
+                background: var(--main-color-three);
+                color: $white;
+            }
+            &.cart-loading {
+                &::before {
+                    background-color: var(--main-color-three);
+                }
+            }
+        }
+        &.text-preview {
+            background: none;
+            border: 1px solid rgba($steam-color, .5);
+            display: inline-block;
+            height: unset;
+            width: unset;
+            font-size: 14px;
+            padding: 8px 20px;
+            color: var(--heading-color);
+            &:hover {
+                background: var(--main-color-two);
+                color: $white;
+            }
+            &.hover-color-one {
+                &:hover {
+                    background: var(--main-color-one);
+                }
+            }
+            &.hover-color-two {
+                &:hover {
+                    background: var(--main-color-two);
+                }
+                &.cart-loading {
+                    &::before {
+                        background-color: var(--main-color-two) !important;
+                    }
+                }
+            }
+            &.hover-color-three {
+                &:hover {
+                    background: var(--main-color-three);
+                }
+                &.cart-loading {
+                    &::before {
+                        background-color: var(--main-color-three) !important;
+                    }
+                }
+            }
+        }
+        &.bg-color-two {
+            background: var(--main-color-two);
+            color: $white;
+            &.cart-loading {
+                &::before {
+                    background-color: var(--main-color-two) !important;
+                }
+            }
+        }
+        &.bg-color-three {
+            background: var(--main-color-three);
+            color: $white;
+            &.cart-loading {
+                &::before {
+                    background-color: var(--main-color-three) !important;
+                }
+            }
+        }
+    }
+}
+
+.bg-color-two {
+    background: var(--main-color-two);
+    color: $white;
+    &.cart-loading {
+        &::before {
+            background-color: var(--main-color-two) !important;
+        }
+    }
+}
+
+.bg-color-three {
+    background: var(--main-color-three);
+    color: $white;
+    &.cart-loading {
+        &::before {
+            background-color: var(--main-color-three) !important;
+        }
+    }
+}
+
+.preview-button {
+    .icon {
+        border: 2px solid $secondary-color;
+        padding: 10px 18px;
+        font-size: 18px;
+        display: inline-block;
+        color: var(--light-color);
+        -webkit-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+        @include responsive(allPhone) {
+            padding: 10px 15px;
+        }
+        @include responsive(vxxs) {
+            font-size: 16px;
+        }
+        i {
+            color: $secondary-color;
+            margin-right: 5px;
+            font-size: 20px;
+        }
+        &:hover {
+            background: $secondary-color;
+            color: $white;
+            i {
+                color: $white;
+            }
+        }
+        &.cart-loading {
+            &::before {
+                background-color: $secondary-color;
+            }
+        }
+    }
+}
+
+.cart-loading {
+    position: relative;
+    z-index: 0;
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        z-index: 9;
+        height: auto;
+        width: auto;
+        visibility: hidden;
+        opacity: 0;
+    }
+    &.active-loading {
+        &::before {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba($black, .9);
+        border-color: rgba($black, .9);
+        color: $white;
+        border: 2px solid transparent;
+        top: 0;
+        left: 0;
+        text-align: center;
+        border-radius: 5px;
+        z-index: 5;
+        visibility: hidden;
+        opacity: 0;
+        background-image: url(../img/loading-cart.gif);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &.bg-two {
+        &::before {
+            background-color: var(--main-color-two);
+            color: $white;
+        }
+    }
+    &.bg-three {
+        &::before {
+            background-color: var(--main-color-three);
+            color: $white;
+        }
+    }
+}
+
+.center-text {
+    .single-global-card {
+        display: grid;
+    }
+    .rating-wrap {
+        justify-content: center;
+    }
+    .global-card-left {
+        margin-right: 0;
+        @include responsive(vxxs) {
+            justify-content: center;
+            margin-right: 0;
+        }
+    }
+}

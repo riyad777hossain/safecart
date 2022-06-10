@@ -1,0 +1,131 @@
+/*
+Theme Name: Newspaper Magazine Bussiness
+Theme URI: 
+Author: 
+Author URI: 
+Description: Newspaper Magazine is a business website template
+Version: 1.0.0
+*/
+
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+
+# Typography
+# Normalize
+# Accessibility
+# Globals
+# Alignments
+# Clearings
+# Posts and pages
+# Captions
+# Galleries
+# Unit test
+# Block Color Palette Colors
+# pages
+    ## navbar
+    ## top_bar
+    ## header_bottom
+    ## banner
+    ## banner_ads
+    ## news
+    ## video
+    ## sports
+    ## right_side_item
+    ## topics
+    ## widgets
+    ## popular_stories
+    ## recent-stories
+    ## highlights
+    ## trendy
+    ## photogallery
+    ## blog-details
+    ## details_tag_area
+    ## details_comments
+    ## details_replay
+    ## author
+    ## about
+    ## contact
+    ## 404
+    ## search_area
+
+# components
+    ## section_title
+    ## button
+    ## back_top
+    ## preloader
+    ## search_popup
+    ## sidebars
+    ## social-connects
+    ## tags-area
+    ## categories
+    ## whats_new
+    ## inner-page-menu
+    ## common-socials
+    ## faq
+
+--------------------------------------------------------------*/
+
+//== Abstract page
+@import "abstracts/mixins";
+@import "abstracts/variables";
+// base page
+@import "base/global";
+//== layout Pages
+@import "layout/navbar";
+@import "layout/footer";
+//== Section Pages
+@import "pages/banner";
+@import "pages/topbar";
+@import "pages/topbar-bottom-area";
+@import "pages/top-menu-category";
+@import "pages/promo-area";
+@import "pages/updated";
+@import "pages/store-flash";
+@import "pages/shop-area";
+@import "pages/shop_details";
+@import "pages/discount_popup";
+@import "pages/shop-details-popup";
+@import "pages/global_card";
+@import "pages/clothing";
+@import "pages/product";
+@import "pages/global_flex_card";
+@import "pages/best_seller";
+@import "pages/download";
+@import "pages/instagram-area";
+@import "pages/discount_banner";
+@import "pages/left-right_area";
+@import "pages/save_area";
+@import "pages/offer";
+@import "pages/sideleft";
+@import "pages/blog";
+@import "pages/blog-details";
+@import "pages/breadcrumb";
+@import "pages/about";
+@import "pages/contact";
+@import "pages/error";
+@import "pages/order_tracking";
+@import "pages/cart";
+@import "pages/checkout";
+@import "pages/signin_signup";
+@import "pages/compare";
+@import "pages/customer_dashboard";
+@import "pages/vendor_dashboard";
+//== Components
+@import "components/section_title";
+@import "components/button";
+@import "components/back_top";
+@import "components/nice_selects";
+@import "components/isootope-list";
+@import "components/tab-list";
+@import "components/countdown";
+@import "components/price-updated-through";
+@import "components/common-review-list";
+@import "components/pagination";
+@import "components/checkbox";
+@import "components/faq";
+@import "components/table";
+@import "components/range-slider";
+@import "components/global_ratings";
+@import "components/search_popup";

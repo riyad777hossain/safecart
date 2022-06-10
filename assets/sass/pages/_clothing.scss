@@ -1,0 +1,142 @@
+/* Clothing area */
+
+.clothing-area {}
+
+.clothing-wrapper {
+    padding: 0 60px;
+    position: relative;
+    z-index: 2;
+    @include responsive(xl) {
+        padding: 0 40px;
+    }
+    @include responsive(lg) {
+        padding: 0 40px;
+    }
+    @include responsive(allPhone) {
+        padding: 0 30px;
+    }
+    @include responsive(xxs) {
+        padding: 0 20px;
+    }
+    .clothing-thumb {
+        @include responsive(xs) {
+            display: none;
+        }
+        img {
+            position: absolute;
+            z-index: -1;
+            &:nth-child(1) {
+                bottom: 0;
+                right: 30%;
+                @include responsive(xxl) {
+                    right: 25%;
+                }
+                @include responsive(lg) {
+                    display: none !important;
+                }
+                @include responsive(allPhone) {
+                    display: none !important;
+                }
+            }
+            &:nth-child(2) {
+                bottom: 0;
+                right: 12%;
+                @include responsive(allxl) {
+                    right: 7%;
+                }
+                @include responsive(xxl) {
+                    right: 0;
+                }
+                @include responsive(xl) {
+                    right: 0;
+                }
+                @include responsive(lg) {
+                    right: 0;
+                }
+                @include responsive(allPhone) {
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+
+.clothing-contents {
+    padding: 60px 0;
+    @include responsive(xxxl) {
+        max-width: 500px;
+    }
+    @include responsive(xxl) {
+        max-width: 500px;
+    }
+    @include responsive(xl) {
+        max-width: 420px;
+        padding: 40px 0;
+    }
+    @include responsive(lg) {
+        max-width: 380px;
+        padding: 40px 0;
+    }
+    @include responsive(allPhone) {
+        max-width: 400px;
+    }
+    @include responsive(sm) {
+        max-width: 300px;
+    }
+    @include responsive(xs) {
+        max-width: 100%;
+        padding: 40px 0;
+    }
+    @include responsive(xxs) {
+        padding: 30px 0;
+    }
+    .percent-discount {
+        margin-bottom: 15px;
+        display: block;
+        @include responsive(xl) {
+            font-size: 20px !important;
+        }
+        @include responsive(lg) {
+            font-size: 18px !important;
+        }
+        @include responsive(allPhone) {
+            font-size: 18px !important;
+        }
+        @include responsive(sm) {
+            font-size: 16px !important;
+        }
+    }
+    .clothing-title {
+        font-size: 60px;
+        line-height: 65px;
+        @include responsive(xl) {
+            font-size: 55px;
+            line-height: 60px;
+        }
+        @include responsive(lg) {
+            font-size: 48px;
+            line-height: 60px;
+        }
+        @include responsive(allPhone) {
+            font-size: 40px;
+            line-height: 50px;
+        }
+        @include responsive(sm) {
+            font-size: 35px;
+            line-height: 40px;
+        }
+        @include responsive(xxs) {
+            font-size: 32px;
+            line-height: 40px;
+        }
+    }
+    .btn-wrapper {
+        .cmn-btn {
+            border: 1px solid var(--main-color-one);
+            &:hover {
+                background: none;
+                color: var(--main-color-one);
+            }
+        }
+    }
+}

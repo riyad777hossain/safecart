@@ -1,0 +1,97 @@
+/*---------------------------------------
+    15. Pagination
+---------------------------------------*/
+
+.custom-pagination {
+    &.color-two {
+        .pagination {
+            li {
+                &.active {
+                    .page-link {
+                        background: var(--main-color-two);
+                    }
+                }
+                .page-link {
+                    &:hover {
+                        background: var(--main-color-two);
+                    }
+                }
+            }
+        }
+    }
+    &.color-three {
+        .pagination {
+            li {
+                &.active {
+                    .page-link {
+                        background: var(--main-color-three);
+                    }
+                }
+                .page-link {
+                    &:hover {
+                        background: var(--main-color-three);
+                    }
+                }
+            }
+        }
+    }
+    &.color-four {
+        .pagination {
+            li {
+                &.active {
+                    .page-link {
+                        background: var(--main-color-four);
+                    }
+                }
+                .page-link {
+                    &:hover {
+                        background: var(--main-color-four);
+                    }
+                }
+            }
+        }
+    }
+    .pagination {
+        li {
+            margin: 5px 10px;
+            @include responsive(allPhone) {
+                margin: 5px 5px;
+            }
+            &.active {
+                .page-link {
+                    background: var(--main-color-one);
+                    color: $white;
+                    border-color: transparent;
+                }
+            }
+            .page-link {
+                background: $white;
+                color: var(--extra-light-color);
+                border: 1px solid;
+                font-size: 18px;
+                -webkit-box-shadow: 0 0 10px rgba($black, .05);
+                box-shadow: 0 0 10px rgba($black, .05);
+                padding: 10px 20px;
+                display: inline-block;
+                cursor: pointer;
+                border-radius: 5px;
+                -webkit-transition: all .3s;
+                -o-transition: all .3s;
+                transition: all .3s;
+                &:hover {
+                    background: var(--main-color-one);
+                    color: $white;
+                    border-color: transparent;
+                }
+                @include responsive(allPhone) {
+                    font-size: 16px;
+                    padding: 7px 15px;
+                }
+                @include responsive(xxs) {
+                    font-size: 15px;
+                    padding: 5px 10px;
+                }
+            }
+        }
+    }
+}
